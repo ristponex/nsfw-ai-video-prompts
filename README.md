@@ -43,7 +43,7 @@
 | **Wan 2.5 T2V** | Text-to-Video | varies | NSFW capable, no reference image needed |
 | **Wan 2.6 T2V** | Text-to-Video | from $0.07/s | Highest quality, up to 1080p 15s |
 | **Wan 2.6 I2V** | Image-to-Video | from $0.07/s | Highest quality I2V, up to 1080p 15s |
-| **Seedance v1.5 Pro** | Video | from $0.222/s | NSFW whitelisted, audio sync capable |
+| **Seedance v1.5 Pro** | Video | from $0.044/s | NSFW whitelisted, audio sync capable |
 | **Seedream** | Image | varies | NSFW whitelisted, reference image generation |
 | **Flux Dev** | Image | varies | NSFW capable, reference image generation |
 
