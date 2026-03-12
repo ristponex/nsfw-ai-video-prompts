@@ -60,13 +60,15 @@
 
 | 模型 | 类型 | 价格 | 分辨率 | 时长 | NSFW 程度 | 最佳用途 |
 |:-----|:-----|:-----|:-------|:-----|:----------|:---------|
-| **Wan 2.2 Spicy** | I2V / I2V-LoRA | **$0.03**/次 | 480p, 720p | 5s, 8s | 完全无限制 | 低成本显性内容 |
-| **Wan 2.5** | I2V / T2V | ~$0.05/次 | 720p, 1080p | 5s, 10s | 裸体 + 中等显性 | 中等质量 |
-| **Wan 2.6** | I2V / T2V | $0.07/次 | 最高 1080p | 5–15s | 裸体（有限显性） | 高质量艺术裸体 |
-| **Seedance v1.5 Pro** | T2V / I2V | **$0.222**/次 | 720p | 5–15s | 白名单 NSFW | 顶级电影质感 |
-| **Vidu Q3-Pro** | T2V / I2V | **$0.06**/次 | 720p, 1080p | 5–10s | 白名单 NSFW | 质量/价格均衡 |
-| **Kling v3.0 Pro** | T2V / I2V | **$0.204**/次 | 最高 1080p | 5–10s | 白名单 NSFW | 运动质量、面部 |
+| **Wan 2.2 Spicy** | I2V / I2V-LoRA | **$0.03**/秒起 | 480p, 720p | 5s, 8s | 完全无限制 | 低成本显性内容 |
+| **Wan 2.5** | I2V / T2V | ~$0.05/秒起 | 720p, 1080p | 5s, 10s | 裸体 + 中等显性 | 中等质量 |
+| **Wan 2.6** | I2V / T2V | $0.07/秒起 | 最高 1080p | 5–15s | 裸体（有限显性） | 高质量艺术裸体 |
+| **Seedance v1.5 Pro** | T2V / I2V | **$0.222**/秒起 | 720p | 5–15s | 白名单 NSFW | 顶级电影质感 |
+| **Vidu Q3-Pro** | T2V / I2V | **$0.06**/秒起 | 720p, 1080p | 5–10s | 白名单 NSFW | 质量/价格均衡 |
+| **Kling v3.0 Pro** | T2V / I2V | **$0.204**/秒起 | 最高 1080p | 5–10s | 白名单 NSFW | 运动质量、面部 |
 
+> **价格说明：** 视频模型价格为每秒生成视频的费用，实际价格取决于所选分辨率和时长。
+>
 > **白名单**表示在 Atlas Cloud 平台上经审批后可生成 NSFW 内容，标准安全过滤已为白名单账户关闭。Vidu 系列同样已开通白名单 NSFW 内容生成。
 
 ### 信任与安全
@@ -1245,7 +1247,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 
 ## 模型专属优化指南
 
-### Wan 2.2 Spicy — 显性内容首选（$0.03/次）
+### Wan 2.2 Spicy — 显性内容首选（$0.03/秒起）
 
 | 设置 | 推荐值 | 原因 |
 |:-----|:-------|:-----|
@@ -1261,7 +1263,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 - 好用的皮肤灯光关键词：「warm key light」「soft diffused」「golden hour」
 - 避免复杂多人场景（质量会大幅下降）
 
-### Wan 2.5/2.6 — 高质量裸体性价比之选（$0.05–$0.07/次）
+### Wan 2.5/2.6 — 高质量裸体性价比之选（$0.05–$0.07/秒起）
 
 | 设置 | 推荐值 | 原因 |
 |:-----|:-------|:-----|
@@ -1276,7 +1278,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 - 2.6 擅长：艺术裸体、身体地景、美术 — 避免显性动作
 - I2V 模式 + 精心选择的参考图能大幅提升效果
 
-### Seedance v1.5 Pro — 顶级电影质感（$0.222/次）
+### Seedance v1.5 Pro — 顶级电影质感（$0.222/秒起）
 
 | 设置 | 推荐值 | 原因 |
 |:-----|:-------|:-----|
@@ -1291,7 +1293,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 - 最佳用途：内衣、艺术裸体、奇幻、电影叙事
 - 避免：显性性行为（即使有白名单也会拒绝）
 
-### Vidu Q3-Pro — 质量/价格均衡（$0.06/次）
+### Vidu Q3-Pro — 质量/价格均衡（$0.06/秒起）
 
 | 设置 | 推荐值 | 原因 |
 |:-----|:-------|:-----|
@@ -1306,7 +1308,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 - 动漫/风格化内容生成能力强
 - 先描述角色，再描述动作，最后描述环境
 
-### Kling v3.0 Pro — 最佳面部质量（$0.204/次）
+### Kling v3.0 Pro — 最佳面部质量（$0.204/秒起）
 
 | 设置 | 推荐值 | 原因 |
 |:-----|:-------|:-----|

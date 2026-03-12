@@ -37,15 +37,17 @@
 
 | Model | Type | Price | Key Strength |
 |-------|------|-------|-------------|
-| **Wan 2.2 Spicy I2V** | Image-to-Video | $0.03/req | LoRA-optimized for NSFW, best value |
-| **Wan 2.2 Spicy I2V LoRA** | Image-to-Video | $0.03/req | Custom style support via LoRA |
+| **Wan 2.2 Spicy I2V** | Image-to-Video | from $0.03/s | LoRA-optimized for NSFW, best value |
+| **Wan 2.2 Spicy I2V LoRA** | Image-to-Video | from $0.03/s | Custom style support via LoRA |
 | **Wan 2.5 I2V** | Image-to-Video | varies | NSFW capable, good quality |
 | **Wan 2.5 T2V** | Text-to-Video | varies | NSFW capable, no reference image needed |
-| **Wan 2.6 T2V** | Text-to-Video | $0.07/req | Highest quality, up to 1080p 15s |
-| **Wan 2.6 I2V** | Image-to-Video | $0.07/req | Highest quality I2V, up to 1080p 15s |
-| **Seedance v1.5 Pro** | Video | $0.222/req | NSFW whitelisted, audio sync capable |
+| **Wan 2.6 T2V** | Text-to-Video | from $0.07/s | Highest quality, up to 1080p 15s |
+| **Wan 2.6 I2V** | Image-to-Video | from $0.07/s | Highest quality I2V, up to 1080p 15s |
+| **Seedance v1.5 Pro** | Video | from $0.222/s | NSFW whitelisted, audio sync capable |
 | **Seedream** | Image | varies | NSFW whitelisted, reference image generation |
 | **Flux Dev** | Image | varies | NSFW capable, reference image generation |
+
+> **Pricing note:** Video model prices are per second of generated video. Actual cost depends on resolution and duration selected. Image model prices are per image.
 
 ---
 
@@ -1446,7 +1448,7 @@ Warm golden lamp light from the side. Shallow depth of field. 35mm film aestheti
 She looks directly at camera with a subtle smile. High quality, detailed, realistic.
 ```
 
-### Step 2: Animate with Wan 2.2 Spicy I2V ($0.03/request)
+### Step 2: Animate with Wan 2.2 Spicy I2V (from $0.03 per second)
 
 Take your generated image and pair it with a motion prompt:
 
@@ -1464,7 +1466,7 @@ her head to look over her shoulder. Smooth, slow movement. Cinematic quality.
 ### Step 3: Iterate and Refine
 
 - Generate 3-5 variations of the same prompt to pick the best one
-- At $0.03/request, 5 attempts = $0.15 — still extremely cheap
+- At from $0.03 per second, 5 attempts = ~$0.15 — still extremely cheap
 - Small wording changes can dramatically affect results
 - Try different reference images with the same prompt
 
@@ -1606,7 +1608,7 @@ if __name__ == "__main__":
 
 ### What is the best AI for NSFW video generation?
 
-**Wan 2.2 Spicy I2V** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) is the best balance of quality, explicit capability, and price ($0.03/request). For highest visual quality, use **Wan 2.6** ($0.07/request). For audio-synced content, use **Seedance v1.5 Pro**.
+**Wan 2.2 Spicy I2V** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) is the best balance of quality, explicit capability, and price (from $0.03 per second). For highest visual quality, use **Wan 2.6** (from $0.07 per second). For audio-synced content, use **Seedance v1.5 Pro**.
 
 ### What is the cheapest NSFW video API?
 
