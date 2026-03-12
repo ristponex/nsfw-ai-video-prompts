@@ -1,141 +1,1515 @@
-<div align="center">
-
-```
- _   _  ______        ______        ___    ___   __     __ _     _
-| \ | |/ ___\ \      / /  __|      / _ \  |_ _|  \ \   / /(_) __| | ___  ___
-|  \| |\___ \\ \ /\ / /| |_       / /_\ \  | |    \ \ / / | |/ _` |/ _ \/ _ \
-| |\  | ___) |\ V  V / |  _|     / _____ \ | |     \ V /  | | (_| |  __/ (_) |
-|_| \_||____/  \_/\_/  |_|      /_/     \_\|___|    \_/   |_|\__,_|\___|\___/
-
- ____                                _       _     _ _
-|  _ \ _ __ ___  _ __ ___  _ __  | |_   | |   (_) |__  _ __ __ _ _ __ _   _
-| |_) | '__/ _ \| '_ ` _ \| '_ \ | __|  | |   | | '_ \| '__/ _` | '__| | | |
-|  __/| | | (_) | | | | | | |_) || |_   | |___| | |_) | | | (_| | |  | |_| |
-|_|   |_|  \___/|_| |_| |_| .__/  \__|  |_____|_|_.__/|_|  \__,_|_|   \__, |
-                            |_|                                          |___/
-```
-
-# NSFW AI Video Prompt Library — 100+ Ready-to-Use Prompts
+# 🔥 NSFW AI Video Prompts — 100+ Ready-to-Use Prompts for Uncensored Video Generation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Prompts](https://img.shields.io/badge/Prompts-100+-blue)]()
-[![Models](https://img.shields.io/badge/Models-5%20Uncensored-red)]()
-[![Last Updated](https://img.shields.io/badge/Updated-March%202026-green)]()
-[![Platform](https://img.shields.io/badge/Platform-Atlas%20Cloud-purple)](https://www.atlascloud.ai?ref=JPM683)
+[![Prompts](https://img.shields.io/badge/Prompts-100%2B-red)](.)
+[![Models](https://img.shields.io/badge/Platform-Atlas%20Cloud-blue)](https://www.atlascloud.ai?ref=JPM683)
 
-**The largest open-source collection of NSFW AI video prompts. Tested, categorized, and optimized for every major uncensored model.**
+**Languages**: English | [中文](README_zh-CN.md) | [日本語](README_ja.md) | [한국어](README_ko.md)
 
-**[English](./README.md)** | **[简体中文](./README_zh-CN.md)** | **[日本語](./README_ja.md)** | **[한국어](./README_ko.md)**
+> The largest open collection of **copy-paste ready** NSFW AI video prompts. Every prompt is tested, detailed, and production-ready. Stop guessing — start generating.
 
----
-
-> **Disclaimer:** This repository is intended for legal adult content creation only. All prompts are designed for use by adults (18+) in jurisdictions where such content is legal. We strictly oppose any content involving minors, non-consensual scenarios, or any other illegal material. Users are responsible for ensuring compliance with local laws.
-
-</div>
+**⚡ New user?** Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) and get **25% bonus credit** on your first top-up (up to $100 extra).
 
 ---
 
 ## Table of Contents
 
-- [Supported Models & Pricing](#supported-models--pricing)
-- [Price Comparison: Atlas Cloud vs fal.ai](#price-comparison-atlas-cloud-vs-falai)
-- [Quick Start (API)](#quick-start-api)
-- [Prompt Engineering Fundamentals](#prompt-engineering-fundamentals)
-- [Category 1: Romantic & Sensual (20 Prompts)](#category-1-romantic--sensual-20-prompts)
-- [Category 2: Artistic Nude & Figure Study (15 Prompts)](#category-2-artistic-nude--figure-study-15-prompts)
-- [Category 3: Lingerie & Fashion (15 Prompts)](#category-3-lingerie--fashion-15-prompts)
-- [Category 4: Fantasy & Mythology (15 Prompts)](#category-4-fantasy--mythology-15-prompts)
-- [Category 5: Anime & Hentai (15 Prompts)](#category-5-anime--hentai-15-prompts)
-- [Category 6: Explicit Action (15 Prompts)](#category-6-explicit-action-15-prompts)
-- [Category 7: Cinematic & Narrative (10 Prompts)](#category-7-cinematic--narrative-10-prompts)
-- [Category 8: Fetish & Niche (10 Prompts)](#category-8-fetish--niche-10-prompts)
-- [Model-Specific Optimization Guide](#model-specific-optimization-guide)
-- [Advanced Prompt Techniques](#advanced-prompt-techniques)
-- [Batch Generation Script](#batch-generation-script)
+- [Supported Models](#supported-models)
+- [Model Comparison for NSFW](#model-comparison-for-nsfw)
+- [Pricing: Cost of 1000 Videos](#pricing-cost-of-1000-nsfw-videos)
+- [Prompts](#prompts)
+  - [Category 1: Glamour & Boudoir](#category-1-glamour--boudoir)
+  - [Category 2: Artistic Nude](#category-2-artistic-nude)
+  - [Category 3: Couple / Romantic Scenes](#category-3-couple--romantic-scenes)
+  - [Category 4: Fantasy & Cosplay](#category-4-fantasy--cosplay)
+  - [Category 5: Solo Performance](#category-5-solo-performance)
+  - [Category 6: Professional / Commercial NSFW](#category-6-professional--commercial-nsfw)
+  - [Category 7: Anime / Hentai Style](#category-7-anime--hentai-style)
+  - [Category 8: Extreme / Explicit](#category-8-extreme--explicit)
+- [Prompt Engineering Deep Dive](#prompt-engineering-deep-dive)
+- [Workflow: Image-to-Video Pipeline](#workflow-image-to-video-nsfw-pipeline)
+- [API Quick Start](#api-quick-start)
 - [FAQ](#faq)
-- [Get Started](#get-started)
-- [Star History](#star-history)
-- [License](#license)
 
 ---
 
-## Supported Models & Pricing
+## Supported Models
 
-All models below are accessible via the [Atlas Cloud API](https://www.atlascloud.ai?ref=JPM683) with NSFW content generation enabled.
-
-| Model | Type | Price | Resolution | Duration | NSFW Level | Best For |
-|:------|:-----|:------|:-----------|:---------|:-----------|:---------|
-| **Wan 2.2 Spicy** | I2V / I2V-LoRA | **$0.03**/req | 480p, 720p | 5s, 8s | Fully unrestricted | Budget explicit content |
-| **Wan 2.5** | I2V / T2V | ~$0.05/req | 720p, 1080p | 5s, 10s | Nudity + moderate explicit | Mid-range quality |
-| **Wan 2.6** | I2V / T2V | $0.07/req | up to 1080p | 5–15s | Nudity (limited explicit) | High-quality artistic nude |
-| **Seedance v1.5 Pro** | T2V / I2V | **$0.222**/req | 720p | 5–15s | Whitelisted NSFW | Premium cinematic quality |
-| **Vidu Q3-Pro** | T2V / I2V | **$0.06**/req | 720p, 1080p | 5–10s | Whitelisted NSFW | Balanced quality/price |
-| **Kling v3.0 Pro** | T2V / I2V | **$0.204**/req | up to 1080p | 5–10s | Whitelisted NSFW | Motion quality, faces |
-
-> **Whitelisted** means NSFW generation is available on Atlas Cloud with approved access. Standard safety filters are bypassed for whitelisted accounts.
-
-### Trust & Security
-
-- **SOC I & II Certified** — Enterprise-grade security compliance
-- **HIPAA Compliant** — Healthcare-level data protection
-- **US-based company** — Subject to US data protection laws
-- **25% bonus on first recharge** (up to $100) — [Sign up here](https://www.atlascloud.ai?ref=JPM683)
+| Model | Type | Price | Key Strength |
+|-------|------|-------|-------------|
+| **Wan 2.2 Spicy I2V** | Image-to-Video | $0.03/req | LoRA-optimized for NSFW, best value |
+| **Wan 2.2 Spicy I2V LoRA** | Image-to-Video | $0.03/req | Custom style support via LoRA |
+| **Wan 2.5 I2V** | Image-to-Video | varies | NSFW capable, good quality |
+| **Wan 2.5 T2V** | Text-to-Video | varies | NSFW capable, no reference image needed |
+| **Wan 2.6 T2V** | Text-to-Video | $0.07/req | Highest quality, up to 1080p 15s |
+| **Wan 2.6 I2V** | Image-to-Video | $0.07/req | Highest quality I2V, up to 1080p 15s |
+| **Seedance v1.5 Pro** | Video | $0.222/req | NSFW whitelisted, audio sync capable |
+| **Seedream** | Image | varies | NSFW whitelisted, reference image generation |
+| **Flux Dev** | Image | varies | NSFW capable, reference image generation |
 
 ---
 
-## Price Comparison: Atlas Cloud vs fal.ai
+## Model Comparison for NSFW
 
-If you've been using fal.ai, here's what you're overpaying:
+| Model | Nudity | Explicit | Quality | Speed | Price | Best For |
+|-------|--------|----------|---------|-------|-------|----------|
+| Wan 2.2 Spicy | ✅✅✅ | ✅✅✅ | ⭐⭐⭐ | Fast | $0.03 | Budget explicit content |
+| Wan 2.5 | ✅✅ | ✅✅ | ⭐⭐⭐⭐ | Medium | varies | Quality balance |
+| Wan 2.6 | ✅✅ | ✅ | ⭐⭐⭐⭐⭐ | Medium | $0.07 | Best visual quality |
+| Seedance v1.5 | ✅✅ | ✅ | ⭐⭐⭐⭐⭐ | Slow | $0.222 | Audio sync, premium |
 
-### Wan Model (5-second video)
-
-| Platform | Pricing Model | 5s Video Cost | 100 Videos Cost |
-|:---------|:-------------|:-------------|:----------------|
-| **Atlas Cloud** | Per request | **$0.05** | **$5.00** |
-| fal.ai | Per second ($0.05/sec) | $0.25 | $25.00 |
-| **Savings** | | **80%** | **$20.00** |
-
-### Kling Model (5-second video)
-
-| Platform | Pricing Model | 5s Video Cost | 100 Videos Cost |
-|:---------|:-------------|:-------------|:----------------|
-| **Atlas Cloud** | Per request | **$0.204** | **$20.40** |
-| fal.ai | Per second ($0.224/sec) | $1.12 | $112.00 |
-| **Savings** | | **82%** | **$91.60** |
-
-### Wan 2.2 Spicy (Atlas Cloud Exclusive)
-
-| Platform | 5s Video Cost | 100 Videos Cost | 1,000 Videos Cost |
-|:---------|:-------------|:----------------|:------------------|
-| **Atlas Cloud** | **$0.03** | **$3.00** | **$30.00** |
-| fal.ai | Not available | Not available | Not available |
-
-> fal.ai does not offer uncensored/NSFW models. Atlas Cloud is one of the few platforms offering fully unrestricted NSFW video generation via API.
+**Quick guide:**
+- **Cheapest explicit content** → Wan 2.2 Spicy ($0.03)
+- **Best quality nudity** → Wan 2.6 ($0.07)
+- **Audio-synced content** → Seedance v1.5 Pro ($0.222)
+- **Text-only (no reference image)** → Wan 2.5 T2V or Wan 2.6 T2V
 
 ---
 
-## Quick Start (API)
+## Pricing: Cost of 1000 NSFW Videos
 
-### Prerequisites
+| Model | Cost / 1000 videos | Resolution | Duration |
+|-------|-------------------|------------|----------|
+| Wan 2.2 Spicy I2V | **$30** | 720p | 5s |
+| Wan 2.5 I2V | ~$50 | 720p | 5s |
+| Wan 2.6 T2V/I2V | **$70** | 1080p | 5s |
+| Wan 2.6 T2V/I2V | $140 | 1080p | 10s |
+| Seedance v1.5 Pro | **$222** | 720p | 5s |
 
-1. Create an account at [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)
-2. Add credits (25% bonus on first recharge, up to $100)
-3. Copy your API key from the dashboard
+---
 
-### Python — Full Workflow
+## Prompts
+
+> **How to use:** Copy any prompt below. For I2V models, prepare a matching reference image first (use Flux Dev or Seedream on Atlas Cloud). For T2V models, paste the prompt directly.
+
+---
+
+### Category 1: Glamour & Boudoir
+
+#### 1.1 — Bedroom Golden Hour
+
+```
+A woman in black lace lingerie slowly turns toward the camera in a dimly lit bedroom. Soft golden light from a bedside lamp creates warm shadows across her skin. She runs her fingers through her long dark hair, arching her back slightly. Camera slowly pushes in from medium shot to close-up on her face. Shallow depth of field, cinematic color grading, film grain.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Use a reference image with the subject already in lingerie and matching lighting. The model preserves clothing from the input image.
+- **Reference image:** Full body or waist-up photo of a woman in black lace lingerie, warm indoor lighting.
+
+#### 1.2 — Silk Robe Reveal
+
+```
+Close-up of a woman's hand slowly pulling a silk robe off her shoulder, revealing bare skin underneath. The ivory fabric slides down her arm in slow motion. Camera follows the fabric as it falls. Warm amber ambient lighting, soft bokeh from candles in the background. Skin has a natural glow. Cinematic shallow depth of field.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Reference image should show the robe already partially off one shoulder. The model animates the continuation of the motion.
+- **Reference image:** Tight crop on shoulder/collarbone area, silk robe draped, warm lighting.
+
+#### 1.3 — Mirror Vanity Scene
+
+```
+A woman in sheer white lingerie sits at a vintage vanity table, applying lipstick while looking into an ornate mirror. The camera captures her reflection. She presses her lips together, then turns to face the camera with a slow smile. Soft diffused window light from the left creates gentle shadows. Shallow depth of field, vintage film tone, 35mm aesthetic.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Mirror scenes work best with Wan 2.6 due to better reflection handling. Include the mirror in the reference image.
+- **Reference image:** Woman seated at vanity, visible mirror reflection, sheer lingerie, soft window light.
+
+#### 1.4 — Red Satin Sheets
+
+```
+A woman lies on her side across red satin sheets, wearing a matching red lace bodysuit. She slowly stretches one arm above her head, elongating her body. Camera dollies from her feet upward along her figure in a slow, continuous movement. Deep crimson lighting from one side, contrasting with cool blue fill light from the other. Cinematic, fashion editorial mood.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** The dolly movement description helps the model create a smooth sweeping camera motion. Red-on-red color schemes are well handled.
+- **Reference image:** Woman lying on red satin sheets, red lingerie, dramatic two-tone lighting.
+
+#### 1.5 — Champagne Toast
+
+```
+A woman in a black velvet corset and high-waisted stockings reclines on a chaise lounge. She raises a champagne glass toward the camera, tilting it slightly so the golden liquid catches the light. She takes a slow sip, eyes looking directly into the lens. Warm tungsten lighting, dark moody background with deep shadows. Film noir aesthetic, 4K cinematic quality.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Props like glasses work better with Wan 2.6. Keep the motion simple — a single gesture performs best.
+- **Reference image:** Woman on chaise lounge holding champagne glass, corset, noir lighting.
+
+#### 1.6 — Balcony Evening
+
+```
+A woman in a sheer black negligee stands on a balcony at twilight, city lights blurred in the background. A gentle breeze moves the fabric and her hair. She leans on the railing, turns her head slowly to look over her shoulder at the camera. Golden hour backlighting creates a silhouette effect with rim light outlining her figure. Cinematic, atmospheric, anamorphic lens flare.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Backlighting prompts work well in T2V because the silhouette simplifies anatomy generation. "Anamorphic lens flare" adds cinematic quality.
+- **Reference image (if I2V):** Woman on balcony, sheer clothing, backlit by sunset, city bokeh.
+
+#### 1.7 — Lace & Pearls Close-Up
+
+```
+Extreme close-up tracking shot across a woman's collarbone and neck, adorned with a pearl necklace over bare skin. The camera moves slowly from left to right. Her chest rises and falls with slow breathing. Macro lens detail captures skin texture and pearl iridescence. Soft top-down lighting, black background, studio quality.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Close-up body shots avoid face distortion issues. Breathing motion is one of the easiest animations for the model.
+- **Reference image:** Macro photo of neck/collarbone with pearls, studio lighting, dark background.
+
+#### 1.8 — Getting Dressed Sequence
+
+```
+A woman stands in front of an open closet in matching bra and panties, selecting a dress. She pulls a red dress from the hanger and holds it against her body, turning left and right to check in a full-length mirror. Natural morning light from a large window. Realistic apartment interior. Medium full-body shot, handheld camera feel with subtle movement.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Dressing/undressing sequences need a clear starting pose in the reference image. 9:16 vertical aspect ratio works best for full-body standing shots.
+- **Reference image:** Woman standing in underwear near closet, natural window light, full body visible.
+
+#### 1.9 — Bubble Bath Luxury
+
+```
+A woman reclines in a large freestanding bathtub filled with bubbles. Only her head, shoulders, and one raised knee are visible above the foam. She lifts a handful of bubbles and blows them gently toward the camera. Steam rises around her. Warm bathroom lighting with candles visible in the background. Soft focus, dreamy atmosphere, slow motion bubble movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Bubbles and steam add natural motion that makes the video feel alive. This prompt works well even with lower-quality models because foam conceals potential artifacts.
+- **Reference image:** Woman in bubble bath, shoulders visible, candle-lit bathroom.
+
+#### 1.10 — Stocking Pull-Up
+
+```
+Close-up shot of a woman's leg as she slowly rolls a black thigh-high stocking up from her ankle to her thigh. She is seated on the edge of a bed, wearing a garter belt. Camera follows her hands as they smooth the fabric upward. Soft side lighting creates contour shadows along her leg. Intimate bedroom setting, warm tones, cinematic slow motion.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Isolated body part close-ups produce the most consistent results. The upward hand motion is easy for the model to track.
+- **Reference image:** Close-up of leg with stocking partially rolled up, hands visible, bed edge visible.
+
+#### 1.11 — Fireplace Fur Rug
+
+```
+A woman lies on a white faux fur rug in front of a roaring fireplace, wearing only a thin gold chain necklace. She rests on her stomach with her chin propped on her hands, feet playfully kicking in the air behind her. Warm firelight dances across her skin creating moving shadows. Camera at low angle, shallow depth of field. Cozy, intimate, luxurious atmosphere.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Fireplace flickering provides natural animation even if body movement is minimal. Describe the light movement for more dynamic results.
+- **Reference image:** Woman on fur rug, stomach-down pose, fireplace in background, warm light.
+
+#### 1.12 — Window Rain
+
+```
+A woman in an oversized sheer white shirt and nothing underneath sits on a window seat during a rainstorm. She presses her hand against the rain-streaked glass, gazing outside. Droplets on the window create bokeh effects with street lights outside. Cool blue-grey natural light illuminates her from the front. Melancholic, cinematic mood, slow subtle movements.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Rain on glass creates beautiful animated texture. Wan 2.6 handles the transparency of sheer fabric better than Spicy.
+- **Reference image:** Woman at rain-streaked window, sheer white shirt, blue-grey lighting.
+
+#### 1.13 — Back Detail Tracking Shot
+
+```
+Camera slowly tracks down a woman's bare back from her neck to her lower back as she stands facing away. Her skin is lightly oiled, catching studio light in highlights along her spine. She shifts her weight from one hip to the other in a slow, natural movement. A single overhead softbox creates dramatic top-down lighting with deep shadows on either side. Black background, beauty campaign aesthetic.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Tracking shots along the body are very reliable. Oiled skin descriptions add realistic light interaction.
+- **Reference image:** Woman's bare back, studio lighting, oiled skin, black background.
+
+#### 1.14 — Blindfold Tease
+
+```
+A woman wearing a black silk blindfold and red lipstick lies back on white pillows. She bites her lower lip and tilts her head to one side. Her hands grip the sheets beside her. Camera slowly pushes in from chest-up to face close-up. Soft diffused overhead lighting, high-key white bedroom setting. Sensual and mysterious atmosphere, fashion photography quality.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Blindfolds eliminate eye-tracking artifacts, which are common in AI video. This is a great trick for more consistent face generation.
+- **Reference image:** Woman with silk blindfold, red lips, lying on white pillows, soft lighting.
+
+#### 1.15 — Undressing Zipper
+
+```
+Over-the-shoulder shot from behind as a woman reaches back to slowly unzip a tight black cocktail dress. The zipper moves down inch by inch, revealing her bare back and the clasp of a black bra. She looks over her shoulder toward the camera with a half-smile. Evening interior lighting, blurred living room background with warm lamp light. Cinematic slow motion, intimate framing.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Unzipping is a clear directional motion the model can follow. Over-the-shoulder framing reduces face distortion risk.
+- **Reference image:** Woman from behind, hand reaching for zipper, dress partially unzipped, warm interior lighting.
+
+#### 1.16 — Jewelry Only
+
+```
+A woman stands in a dark studio wearing only layered gold body chains and a waist chain. She rotates slowly in a 180-degree turn, the chains catching light and creating moving highlights across her body. Single dramatic spotlight from above-left. Rest of the frame is deep black. High fashion editorial, slow deliberate movement, 4K detail on jewelry reflections.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Wan 2.6 handles metallic reflections better. The dark background simplifies the scene and improves body coherence.
+- **Reference image:** Woman in body chain jewelry only, dramatic single light source, dark studio.
+
+---
+
+### Category 2: Artistic Nude
+
+#### 2.1 — Classical Venus Pose
+
+```
+A woman stands in a classical contrapposto pose inspired by Botticelli's Birth of Venus. One hand covers her chest, the other holds flowing fabric at her side. The fabric billows gently as if in a breeze. Soft, even studio lighting mimics Renaissance painting illumination. Warm ivory skin tones, muted earth-tone background. Fine art photography quality, museum-worthy composition.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Classical art references help the model produce anatomically coherent poses. The flowing fabric adds motion without requiring complex body movement.
+- **Reference image (if I2V):** Woman in Venus-like pose with draped fabric, soft studio lighting.
+
+#### 2.2 — Shadow Play
+
+```
+A nude woman stands behind a window with venetian blinds, creating horizontal stripe shadows across her entire body. She slowly raises both arms above her head, and the shadow pattern shifts across her skin. High contrast black and white. Dramatic side lighting from the window. Artistic, abstract feel — the shadows become the subject more than the body. 35mm film grain.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Shadow-heavy scenes are forgiving of anatomical artifacts. Black and white further reduces color-related issues.
+- **Reference image:** Nude figure with venetian blind shadow stripes, high contrast B&W, arms at sides.
+
+#### 2.3 — Body Landscape
+
+```
+Extreme close-up macro shot treating the curves of a woman's nude body as a landscape. Camera slowly pans across the terrain of her hip, waist, and ribcage like a drone flying over sand dunes. Warm golden hour lighting rakes across the skin at a low angle, emphasizing every curve and contour. Shallow depth of field, parts of the body blur into abstraction. Meditative, contemplative pace.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 21:9
+- **Difficulty:** Beginner
+- **Pro tip:** Body-as-landscape abstractions work extremely well because the model doesn't need to track faces or full anatomy. Use 21:9 widescreen for the most cinematic result.
+- **Reference image:** Macro close-up of hip/waist curves, golden side lighting, shallow DOF.
+
+#### 2.4 — Underwater Float
+
+```
+A nude woman floats weightlessly in clear blue water, hair fanning out around her head like a halo. She slowly extends her arms outward in a cruciform pose. Sunlight penetrates the water from above, creating caustic light patterns across her skin. Small air bubbles rise from her body. Ethereal, dreamlike quality. Shot from slightly below looking upward. Slow motion.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Underwater scenes benefit from Wan 2.6's superior quality. The water medium naturally softens edges and hides artifacts. Caustic light patterns add beautiful procedural animation.
+- **Reference image (if I2V):** Woman floating in clear water, underwater photography, sunlight from above.
+
+#### 2.5 — Paint Drip Body Art
+
+```
+A woman stands against a white backdrop as thick paint slowly drips down her nude body. Streams of deep blue, crimson, and gold paint flow over her shoulders and down her torso. She stands still with arms slightly away from her body as the paint creates abstract patterns on her skin. Bright even studio lighting, white cyclorama background. Contemporary art installation feel. High speed camera capturing paint flow in slow motion detail.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Paint drip effects work best with Wan 2.6 for color accuracy. The reference image should already show some paint on the body to give the model a starting point.
+- **Reference image:** Woman with paint partially covering body, white background, studio lighting, paint mid-drip.
+
+#### 2.6 — Forest Nymph
+
+```
+A nude woman walks barefoot through a sun-dappled forest, seen from behind at a distance. Ferns and tall grass partially conceal her lower body. She reaches up to touch a low-hanging branch, and leaves scatter downward. Shafts of golden sunlight break through the tree canopy. Natural, organic, editorial nature photography style. Medium telephoto lens compression, soft background bokeh from forest depth.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Distance shots in nature are very forgiving. The natural environment provides organic motion (leaves, light) that enriches the video. Walking away from camera is easier to generate than walking toward.
+- **Reference image:** Nude woman walking in forest, from behind, sun-dappled lighting, partial concealment by foliage.
+
+#### 2.7 — Studio Figure Study
+
+```
+A nude woman sits on a simple wooden stool in a photography studio, one leg crossed over the other. She slowly shifts from a profile view to a three-quarter angle, turning her upper body toward the camera. Single large octabox softlight from the right creates gentle wraparound illumination with soft shadows. Grey seamless paper background. Classical figure study composition, dignified and statuesque.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Simple studio setups with single light sources produce the most consistent results. The seated pose limits lower body movement, reducing artifact risk.
+- **Reference image:** Nude woman on stool, profile pose, single softbox lighting, grey background.
+
+#### 2.8 — Milk Bath
+
+```
+A woman lies in a bathtub filled with opaque white milk, only her face, the tops of her shoulders, one knee, and her hands visible above the surface. Pink and white flower petals float on the milk surface. She tilts her head back slowly, eyes closed, in an expression of bliss. Overhead camera angle looking straight down. Soft natural window light, pastel tones. Luxurious, serene fine art aesthetic.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 1:1
+- **Difficulty:** Beginner
+- **Pro tip:** Milk baths are ideal for NSFW AI video — the milk conceals the body while keeping the scene sensual, and floating petals add easy natural motion. Overhead angle is the classic composition.
+- **Reference image:** Overhead milk bath photo with floating petals, face and partial body visible, soft lighting.
+
+#### 2.9 — Silhouette Stretch
+
+```
+A completely backlit silhouette of a nude woman performing a slow stretch sequence against a bright white background. She starts with arms at her sides, raises them overhead, then bends to one side in a lateral stretch. Only the dark outline of her figure is visible — no skin detail, pure form. High contrast, minimal, graphic quality. Like a living logo or icon.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Pure silhouettes eliminate all texture/anatomy issues while still being visually striking. Great for beginners to test workflows. Any model can handle this well.
+- **Reference image (if I2V):** Silhouette of standing woman, bright white backlight, arms at sides.
+
+#### 2.10 — Desert Dunes
+
+```
+A nude woman walks along the crest of a sand dune in a vast desert landscape, seen from a great distance as a small figure against the sky. Wind blows fine sand off the dune ridge. The setting sun creates an orange-pink sky and long shadows. Epic wide-angle landscape shot where the human figure is a small element within the vast natural scene. National Geographic cinematic quality, drone footage aesthetic.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 21:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Extreme wide shots with small figures are the most reliable for full nudity — the distance means less anatomical detail to get wrong. 21:9 ultrawide enhances the epic landscape feel.
+- **Reference image (if I2V):** Tiny figure on sand dune crest, sunset lighting, wide landscape.
+
+#### 2.11 — Wet Skin Studio
+
+```
+A woman stands in a dark studio, skin glistening wet as if she just stepped out of rain. A single hard spotlight from above-right creates dramatic chiaroscuro lighting. Water droplets are visible on her shoulders and arms. She breathes deeply, chest rising and falling, then slowly turns her face upward into the light. Black background, high contrast, Leibovitz-inspired portrait quality. Slow motion water droplets catching the light.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Wet skin adds realistic light interaction that makes AI-generated skin look more convincing. Breathing motion is subtle and easy for the model.
+- **Reference image:** Wet-skinned woman, single dramatic spotlight, dark studio, water droplets visible.
+
+#### 2.12 — Yoga Sunrise
+
+```
+A nude woman performs a slow sun salutation yoga sequence on a cliff overlooking the ocean at sunrise. She transitions from mountain pose to forward fold with fluid, graceful movement. The rising sun behind her creates a warm golden backlight and lens flare. Waves crash on rocks far below. Wide establishing shot. Spiritual, empowering, natural beauty aesthetic. Golden hour cinematography.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Yoga transitions are complex multi-step movements — keep the duration short (5s) for best coherence. The backlit wide shot helps maintain body consistency.
+- **Reference image (if I2V):** Woman in mountain pose on cliff edge, sunrise backlighting, ocean background.
+
+#### 2.13 — Fabric Unwrap
+
+```
+A woman stands wrapped in a long piece of white chiffon fabric. She begins to slowly turn, and the fabric unwinds from her body in a spiral, progressively revealing more skin. The unwinding fabric floats and billows around her in slow motion. Bright white studio background, even lighting from all sides. Elegant, dance-like quality. Camera at mid-height, full body framing. The fabric moves like a living entity.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Fabric animation is one of AI video's strengths. Start the reference image with fabric mostly wrapped, and let the prompt describe the unwinding. Wan 2.6 handles flowing cloth best.
+- **Reference image:** Woman wrapped in white chiffon, white studio background, even lighting.
+
+#### 2.14 — Ocean Waves
+
+```
+A nude woman lies at the edge of the surf on a sandy beach. Gentle waves wash over her body and recede rhythmically. She lies on her back with eyes closed, arms outstretched, letting the water flow over her. Late afternoon golden light, wet sand reflects the sky. Overhead drone shot slowly descending. Peaceful, meditative, earth-mother energy. The rhythm of the waves dominates the scene.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Water washing over a body creates reliable, repeating motion that AI handles well. The overhead drone perspective avoids complex perspective changes.
+- **Reference image:** Woman lying at surf's edge, overhead angle, golden light, waves touching her body.
+
+#### 2.15 — Smoke & Form
+
+```
+A nude woman's body is partially obscured by wisps of colored smoke — purple and blue — swirling around her in a dark studio. She moves slowly through the smoke, arms creating gentle currents that disturb the tendrils. Single rim light from behind outlines her figure through the smoke. Moody, mysterious, abstract. The smoke is the primary visual element, the body secondary. Slow, hypnotic movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Smoke naturally animates in AI video and provides beautiful coverage of potential artifacts. Colored smoke on a dark background is a reliable artistic approach.
+- **Reference image:** Woman with colored smoke, rim-lit, dark background, smoke partially obscuring body.
+
+---
+
+### Category 3: Couple / Romantic Scenes
+
+#### 3.1 — Slow Dance Bedroom
+
+```
+A couple in a dimly lit bedroom. The man wears an unbuttoned white shirt and dark pants. The woman wears a silk slip dress. They sway slowly in a close embrace, foreheads touching. He has one hand on her lower back, she has both hands on his chest. Warm string lights in the background create soft bokeh. Slow, intimate rotation. Camera slowly orbits around them. Golden warm tones.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Two-person scenes require more processing power — Wan 2.6 handles them best. Keep the motion simple (swaying, not complex choreography). Specify each person's clothing clearly.
+- **Reference image (if I2V):** Couple in close embrace, dimly lit room, string lights background.
+
+#### 3.2 — Kiss Close-Up
+
+```
+Extreme close-up of a couple's lips meeting in a slow, gentle kiss. The camera is at lip level, slightly angled. His hand comes up to cradle her jaw. Shallow depth of field — only the lips and immediate skin are in focus. Warm, soft lighting from the side. Skin tones are warm and natural. Time seems to slow down. Intimate, tender, cinematic. The rest of the world is a blur.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Extreme close-ups of lips avoid the dual-face generation challenge. The shallow DOF description helps blur any imperfections.
+- **Reference image:** Close-up of two faces about to kiss, lips nearly touching, warm side lighting.
+
+#### 3.3 — Beach Sunset Embrace
+
+```
+A couple stands waist-deep in calm ocean water at golden hour. She wraps her arms around his neck, legs around his waist. He holds her, slowly turning them both in the water. The setting sun creates a massive golden backlight. Silhouette-to-semi-silhouette exposure. Small waves lap around them. Lens flare from the sun. Epic romantic cinematic wide shot, drone pulling slowly backward to reveal the vast ocean and sky.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 21:9
+- **Difficulty:** Advanced
+- **Pro tip:** Backlighting both figures as semi-silhouettes dramatically reduces artifact risk in two-person scenes. The water conceals lower body complexity.
+- **Reference image (if I2V):** Couple embracing in ocean, backlit sunset, silhouette, wide shot.
+
+#### 3.4 — Morning After
+
+```
+A couple lies in white sheets in morning light. He lies on his back, she rests her head on his bare chest. She traces lazy circles on his skin with her finger. Soft white curtains billow from an open window, letting in warm morning sun. Camera is at mattress level, intimate POV. Everything is white and golden. Peaceful, tender, post-intimate moment. Slow breathing movements.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Lying-down scenes are much easier for the model than standing scenes with two people. The sheets naturally cover most anatomy, reducing complexity.
+- **Reference image:** Couple in bed, white sheets, woman on man's chest, morning window light.
+
+#### 3.5 — Neck Kiss
+
+```
+A man stands behind a woman, both shown from the shoulders up. He slowly lowers his head to kiss her neck. She tilts her head to one side, eyes closing, lips slightly parting. His hand reaches up to gently move her hair aside. Warm interior lighting from the side. Blurred background. Extreme close-up framing. Sensual, anticipatory tension. Slow, deliberate movements. Skin texture visible in sharp detail.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Neck kiss scenes from behind avoid showing two full faces simultaneously, which reduces dual-face artifacts. Keep the framing tight.
+- **Reference image:** Man behind woman, about to kiss her neck, her head tilted, warm lighting.
+
+#### 3.6 — Bathtub For Two
+
+```
+A couple sits in a large freestanding bathtub facing each other, surrounded by candlelight. She has her legs over his, bubbles partially covering them. He picks up a handful of foam and playfully puts it on her nose. She laughs, splashing a tiny bit of water. Warm candlelight creates golden highlights on wet skin. Steam rises between them. Cozy, playful, intimate. Shot from a slightly elevated angle.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Bathtub scenes with two people need Wan 2.6 for best results. The water and bubbles conceal bodies and simplify the generation. Playful actions add charm.
+- **Reference image:** Couple in bathtub facing each other, candlelight, bubbles, elevated camera angle.
+
+#### 3.7 — Dress Unzipping
+
+```
+A woman stands with her back to the camera in an evening dress. A man's hands enter the frame from behind and slowly unzip her dress. The zipper descends, revealing her bare back inch by inch. She glances over her shoulder. Only their hands and her back are prominently shown. Dim bedroom lighting, warm tones. Camera focuses tight on the zipper area. Intimate, anticipatory.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Having only hands visible for the second person dramatically simplifies the scene. The unzipping motion is clear and directional — ideal for AI video.
+- **Reference image:** Woman's back in dress, man's hands at zipper, dim lighting.
+
+#### 3.8 — Shower Silhouette
+
+```
+Silhouette of a couple behind a frosted glass shower door. Steam fills the air. Through the translucent glass, you can see them embracing — she has her arms around his neck. Hot water streams down the glass. The figures shift and move slowly behind the frosted barrier. Bathroom lighting from behind creates the silhouette effect. Artistic, suggestive without being explicit. Steam and water droplets on glass are the sharpest elements.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Frosted glass lets you suggest explicit content while the glass barrier hides all anatomical details, making generation reliable. Water on glass animates beautifully.
+- **Reference image (if I2V):** Silhouettes behind frosted shower glass, steam, water droplets.
+
+#### 3.9 — Lap Sitting
+
+```
+A woman sits on a man's lap on a plush armchair. She faces him with her knees on either side. She wears a matching bra and panty set, he is shirtless. She runs both hands through his hair while looking down at him. He has his hands on her waist. Camera at their eye level from the side, showing both profiles. Warm lamplight from one side, dark moody room. Intimate, sensual tension. Slow, minimal movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Side profile framing for couples is the most reliable angle — it shows both people clearly without one face being obscured or distorted. Keep movement subtle.
+- **Reference image:** Couple on armchair, woman on man's lap facing him, side angle, warm lamp lighting.
+
+#### 3.10 — Against The Wall
+
+```
+A couple against a textured brick wall. He presses her gently against the wall, one hand bracing beside her head. She grabs his shirt collar, pulling him closer. Their faces are inches apart, heavy eye contact. Urban setting, a dim alley or industrial loft. Hard directional light from one side creates dramatic shadows on the wall. Raw, passionate energy. Camera slowly pushes in. Gritty, cinematic, high contrast.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** The wall provides a stable background that prevents environmental warping. Hard lighting with strong shadows is more forgiving than even lighting for two-person scenes.
+- **Reference image:** Couple against brick wall, intense eye contact, dramatic side lighting, close proximity.
+
+#### 3.11 — Blindfolded Trust
+
+```
+A woman lies on a bed wearing a silk blindfold and a lace bodysuit. A man's hand enters the frame and slowly traces a line down her arm with a single fingertip. She shivers slightly at the touch, goosebumps visible on her skin in the close-up. Only his hand and her arm/torso are visible. Soft diffused overhead lighting. White bedding. Intimate, trust-based, sensual. Extreme close-up tracking the finger's path.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Showing only a hand from the second person eliminates dual-person complexity entirely. The blindfold removes eye-tracking issues. This combination is one of the most reliable for couple content.
+- **Reference image:** Close-up of blindfolded woman's arm/torso, man's hand about to touch, soft overhead light.
+
+#### 3.12 — Forehead Kiss
+
+```
+A man gently kisses a woman's forehead while she closes her eyes and smiles softly. He cradles her face with both hands. Shot from a low angle looking slightly up. They are backlit by a warm sunset through a window. Golden rim light outlines both figures. She reaches up and holds one of his wrists. Tender, protective, deeply romantic. Slow, held moment — almost a freeze-frame with subtle breathing movement.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Forehead kisses are simpler to generate than lip kisses — only one face is fully visible. The backlighting reduces facial detail requirements.
+- **Reference image:** Man kissing woman's forehead, his hands on her face, backlit, warm tones.
+
+#### 3.13 — Undressing Each Other
+
+```
+Medium shot of a couple standing face to face. She slowly unbuttons his shirt from top to bottom while maintaining eye contact. He slides the strap of her dress off one shoulder. Warm ambient bedroom lighting. Slow, deliberate pace. The tension of anticipation. Every small gesture feels significant. Cinematic, shot like an indie film love scene.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Describe one action at a time for best results. In a 5-second clip, one or two undressing gestures is realistic. Multiple actions need longer duration.
+- **Reference image:** Couple face to face, her hands on his shirt buttons, his hand near her shoulder strap.
+
+#### 3.14 — Carried To Bed
+
+```
+A man carries a woman in his arms (bridal carry) toward a bed. She has her arms around his neck, laughing. He gently lays her down on the bed, leaning over her. She pulls him down by his shirt. Shot from the side, following the motion from standing to lying down. Warm bedroom lighting, rumpled white sheets. Spontaneous, passionate, joyful energy. Handheld camera feel with natural movement.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Complex physical interaction (carrying) is one of the hardest things for AI video. Use Wan 2.6 and keep to 5 seconds. The motion from standing to lying simplifies partway through.
+- **Reference image (if I2V):** Man holding woman in bridal carry, warm bedroom, approaching bed.
+
+#### 3.15 — Tangled Sheets
+
+```
+Overhead bird's-eye view looking straight down at a couple tangled in white sheets on a bed. Only parts of their bodies are visible between the folds of fabric — a bare shoulder here, intertwined fingers there, a turned face. They shift and move slowly beneath the sheets. Morning light from one side creates long shadows across the white fabric. Artistic, abstract, the sheets create a landscape of peaks and valleys. Minimal movement, breathing and subtle shifting.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 1:1
+- **Difficulty:** Beginner
+- **Pro tip:** The overhead sheet shot is incredibly forgiving — sheets cover nearly everything while the scene reads as deeply intimate. One of the most reliable couple prompts.
+- **Reference image:** Overhead view of couple in tangled white sheets, partial body visibility, morning light.
+
+---
+
+### Category 4: Fantasy & Cosplay
+
+#### 4.1 — Dark Elf Sorceress
+
+```
+A dark elf woman with obsidian skin and long silver-white hair stands in a magical forest clearing. She wears only strategically placed silver armor pieces and a flowing translucent cape. She raises her hands and conjures swirling purple magical energy between her palms. The energy illuminates her face and body from below. Bioluminescent plants glow in the background. Fantasy RPG cinematic, dramatic low-angle shot. Particle effects and magical sparkles float in the air.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Fantasy elements (magic particles, glowing plants) add motion that enriches the scene. Dark skin with silver/white accents creates stunning high-contrast palette. Specify armor placement carefully.
+- **Reference image (if I2V):** Dark elf woman in minimal silver armor, magical forest, purple light.
+
+#### 4.2 — Succubus Transformation
+
+```
+A beautiful woman in a dark room begins a slow transformation. Small black horns emerge from her forehead, dark wings unfurl from her back, and her eyes glow red. She wears a form-fitting black leather outfit that leaves her midriff and legs exposed. She extends one clawed hand toward the camera with a seductive smile. Red and black smoke swirls around her feet. Gothic fantasy horror aesthetic, dramatic uplighting in crimson.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Transformation effects are difficult — focus on one transformation element (e.g., just the wings unfurling) for a 5-second clip rather than trying everything at once.
+- **Reference image (if I2V):** Succubus character mid-transformation, horns and wings, red eyes, dark background.
+
+#### 4.3 — Warrior Princess
+
+```
+A muscular woman in fantasy warrior bikini armor stands on a cliff overlooking a burning city. Wind whips her braided red hair. She raises a glowing sword overhead with both hands, the blade emitting golden light. Her bronze skin glistens with sweat. Camera slowly tilts upward from her boots to the sword tip against a dramatic storm sky. Epic, heroic, powerful. Orchestral movie trailer energy.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** The tilt-up camera movement creates a reveal that's dramatic and technically reliable. Wind in hair adds organic motion. Glowing weapons are a nice AI video bonus.
+- **Reference image (if I2V):** Warrior woman on cliff, bikini armor, sword raised, stormy sky.
+
+#### 4.4 — Cyberpunk Strip Club
+
+```
+A woman dances on a neon-lit stage in a cyberpunk strip club. She wears a futuristic holographic bikini that shimmers and changes color with her movement. Neon signs in Japanese and English glow behind her. Rain is visible through a window, streaking with neon reflections. She moves fluidly around a chrome pole. Camera slowly pans across the scene. Blade Runner aesthetic, heavy atmosphere, synthwave color palette — hot pink, cyan, purple.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Neon lighting hides a lot of artifacts due to its extreme color saturation. Cyberpunk settings are well-represented in training data, so environments generate reliably.
+- **Reference image:** Woman on neon stage, holographic outfit, cyberpunk club interior.
+
+#### 4.5 — Mermaid Surface
+
+```
+A beautiful mermaid breaks the surface of a moonlit ocean. From the waist up she is a nude woman with long flowing wet hair. Her iridescent fish tail is visible beneath the water surface, scales catching moonlight. She arches her back and tosses her head, water droplets flying in an arc. A full moon illuminates the scene. Bioluminescent plankton creates blue sparkles in the water around her. Fantasy illustration come to life, magical realism.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Mermaid scenes work well because the water naturally handles the human-fish transition. The hair toss creates a satisfying motion arc. Bioluminescence adds AI-friendly particle effects.
+- **Reference image (if I2V):** Mermaid emerging from water, moonlit, iridescent tail visible underwater.
+
+#### 4.6 — Anime School Girl Wind
+
+```
+Anime-style illustration of a school girl on a rooftop during golden hour. A strong gust of wind catches her pleated skirt, lifting it to reveal thigh-high stockings. She grabs the hem with one hand, blushing. Cherry blossom petals blow across the scene. Her long hair streams horizontally in the wind. Classic anime art style with cel shading and clean linework. Camera holds steady on a medium shot. Vibrant saturated colors, clear blue sky.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Specifying "anime-style illustration" and "cel shading" pushes the output toward 2D animation. Cherry blossom petals are classic and generate well.
+- **Reference image (if I2V):** Anime-style school girl on rooftop, wind blowing, golden hour, 2D illustration style.
+
+#### 4.7 — Dragon Queen
+
+```
+A nude woman sits on a throne of dragon skulls and bones, draped only in a living snake that coils around her body. Two small dragons perch on her shoulders, breathing tiny flames. She has golden eyes with vertical slit pupils and subtle scales on her cheekbones. Crown of twisted black metal on her head. Dark throne room lit by torches and dragon fire. Game of Thrones meets dark fantasy art. Regal, dangerous, alluring.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Throne scenes are static-body with dynamic-environment (flames, small dragon movements), which is ideal for AI video. Firelight provides natural animation.
+- **Reference image (if I2V):** Dragon queen on bone throne, small dragons, torch-lit throne room.
+
+#### 4.8 — Space Station Pinup
+
+```
+A woman floats weightlessly in a space station corridor, wearing only a tiny astronaut patch bikini. Her hair fans out in zero gravity. She slowly tumbles in the microgravity, a playful smile on her face. Earth is visible through a large viewport behind her, the blue planet casting a soft blue light on her skin. Retro sci-fi pinup aesthetic mixed with realistic space photography. Slow, graceful zero-gravity movement.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Zero-gravity floating is naturally slow and dreamy, which aligns well with AI video generation speeds. The Earth viewport adds a stunning background element.
+- **Reference image (if I2V):** Woman floating in space station, bikini, hair in zero-g, Earth visible through window.
+
+#### 4.9 — Vampire Seduction
+
+```
+A pale woman in a sheer black gothic gown descends a grand staircase in a candlelit castle. She has crimson lips, glowing amber eyes, and visible fangs when she smiles. She runs one hand along the stone banister. Hundreds of candles flicker on the walls. Her gown trails behind her on the steps. Camera tracks her descent from a low angle. Gothic romance, Interview with the Vampire aesthetic. Rich, dark, decadent color palette — deep reds, blacks, gold.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Staircase descent is a clear, directional motion that AI handles well. The hundreds of candles provide rich ambient flickering animation throughout the frame.
+- **Reference image:** Vampire woman on grand staircase, gothic gown, candlelit castle interior.
+
+#### 4.10 — Goddess of Spring
+
+```
+A woman emerges from a massive blooming flower, like Thumbelina but life-sized. She is nude, covered in dew drops and flower pollen. Petals slowly unfurl around her as she stretches and awakens. Butterflies land on her outstretched fingers. Lush garden background with impossibly vibrant flowers. Warm golden sunlight, macro photography depth of field making flowers look enormous. Fairy tale illustration quality, Studio Ghibli meets fine art photography.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** "Emerging from flower" gives the model a clear composition anchor. Butterflies and unfurling petals add layered motion. Referencing Studio Ghibli pulls in a recognizable aesthetic.
+- **Reference image (if I2V):** Woman emerging from large flower, covered in dew, butterflies, lush garden.
+
+---
+
+### Category 5: Solo Performance
+
+#### 5.1 — Pole Dance Spin
+
+```
+A woman in a metallic silver bikini performs a slow spinning descent on a chrome pole. She hooks one leg around the pole and leans back, hair falling freely as she rotates. Purple and blue stage lighting creates dynamic shadows. Slow motion captures the hair movement and body rotation. Professional strip club stage with LED lights in the floor. Shot from a low angle looking up at the spinning figure. Confident, athletic, powerful.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Pole dance spins have a clear rotational axis, which helps the model maintain body coherence. Low angle looking up is a flattering and reliable perspective.
+- **Reference image:** Woman on pole, mid-spin, metallic bikini, stage lighting, low angle.
+
+#### 5.2 — Sensual Floor Dance
+
+```
+A woman in a black lace bodysuit performs a slow, sensual floor dance routine. She starts on all fours, arches her back deeply, then rolls onto her back, running her hands down her body. Camera is at floor level, capturing the movement intimately. Warm spotlight from above creates a pool of light on a dark stage. Her movements are fluid and cat-like. Professional dance performance quality, contemporary dance meets burlesque.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Floor-level camera for floor dance creates the most immersive perspective. Keep to one or two movement transitions per 5-second clip.
+- **Reference image:** Woman on floor in lace bodysuit, arched back pose, spotlight from above, dark background.
+
+#### 5.3 — Shower Scene
+
+```
+A woman stands under a rainfall showerhead, hot water streaming over her nude body. She tilts her head back, letting water run over her face and down her chest. Steam fills the glass-enclosed shower. She runs both hands through her wet hair, slicking it back. Warm bathroom lighting through frosted glass. Water droplets and streams are the primary visual texture. Camera at chest height, medium shot through the partially steamed glass door. Warm, steamy, relaxed.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Running water is one of the most reliable animations in AI video. The steam and water provide natural softening of details. Head-tilting-back is a simple, effective motion.
+- **Reference image:** Woman in shower, head tilted back, water streaming, steam, warm lighting.
+
+#### 5.4 — Lingerie Try-On
+
+```
+A woman stands in front of a full-length mirror in a boutique fitting room. She models a red lace bra and high-waisted panty set, turning side to side to check the fit. She adjusts one strap, smooths the fabric over her hip, and poses with hands on waist. Bright, even fitting room lighting. Multiple reflections from angled mirrors. Realistic, candid, like a fitting room selfie video come to life.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Mirror scenes create a natural "two-shot" effect. Fitting room lighting is flat and even, which simplifies the generation. The try-on narrative feels organic and relatable.
+- **Reference image:** Woman in lingerie in fitting room, full-length mirror visible, even lighting.
+
+#### 5.5 — Bed Rolling
+
+```
+A woman in an oversized white t-shirt and cotton panties playfully rolls across a large bed, hugging a pillow. She rolls from one side to the other, the t-shirt riding up to expose her midriff and legs. Messy white bedding. Bright morning light from large windows. Overhead camera angle looking straight down, capturing the rolling motion. Carefree, playful, girl-next-door energy. Natural, unstaged feeling.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 1:1
+- **Difficulty:** Beginner
+- **Pro tip:** Rolling motion from overhead is one of the easiest for AI to generate — it's essentially a rotation around a central axis. The casual clothing feels more authentic.
+- **Reference image:** Overhead view of woman lying on white bed, t-shirt and panties, morning light, pillow nearby.
+
+#### 5.6 — Oil Massage
+
+```
+Close-up of hands applying glistening massage oil to a woman's bare back. The hands spread the oil in long, slow strokes from lower back to shoulders. Oil catches the light, creating moving highlights across the skin. She lies face down on a massage table with a white towel draped across her lower body. Warm spa lighting, bamboo and candle decor blurred in background. ASMR-like visual quality, extremely detailed skin texture. Slow, rhythmic, hypnotic movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Massage scenes with only hands and back visible are extremely reliable. The oil adds beautiful light interaction. Repetitive stroking motion is easy for AI to generate consistently.
+- **Reference image:** Hands applying oil to woman's back, massage table, warm spa lighting.
+
+#### 5.7 — Yoga Downward Dog
+
+```
+A woman in a sheer mesh sports bra and high-cut yoga shorts performs a slow transition from downward-facing dog to cobra pose on a yoga mat. Her body moves fluidly through the sequence. Sweat glistens on her skin. Natural light from floor-to-ceiling windows in a minimalist studio. Camera at mat level, side profile capturing the full body arch. Athletic, strong, sensual. Shallow depth of field, clean modern interior background.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Yoga transitions are recognizable movement patterns that AI models have learned well. Side profile maintains body coherence throughout the pose change.
+- **Reference image:** Woman in downward dog pose, mesh sportswear, side view, studio with natural light.
+
+#### 5.8 — Striptease Jacket
+
+```
+A woman in a black oversized blazer with nothing underneath slowly opens the jacket, holding each lapel. She pulls one side open just enough to reveal the inner curve of her breast, then pulls it closed again with a teasing smirk. She repeats with the other side. Camera at chest height, medium close-up. Moody bar lighting, warm amber, against a dark background. Confident, controlled, teasing. Slow, deliberate gestures.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** The open-close-open tease is perfect for short clips — it creates a loop-friendly video. The blazer provides structure that helps the model maintain clothing consistency.
+- **Reference image:** Woman in open black blazer, nothing underneath, holding lapels, moody bar lighting.
+
+#### 5.9 — Stretching Wake-Up
+
+```
+A woman in a cropped tank top and thong sits on the edge of a bed, stretching as if she just woke up. She raises her arms overhead in a full body stretch, the tank top riding up to expose her entire midriff. She arches her back, yawns naturally, then runs her fingers through messy bed hair. Soft warm morning light from behind, creating a glowing halo effect on her hair. Natural, candid, unposed beauty. Handheld camera at bed level.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Morning stretching is relatable, natural-looking motion. The arms-overhead stretch is a simple, clear gesture that AI handles reliably.
+- **Reference image:** Woman sitting on bed edge, arms beginning to stretch up, tank top and thong, morning backlight.
+
+#### 5.10 — Mirror Dance
+
+```
+A woman in a bra and boy shorts dances slowly in front of a bathroom mirror, using it as an audience. She mouths along to a song (no audio), making flirtatious expressions at her reflection. She runs her hands through her hair, turns around to check herself out from behind. Bathroom vanity lighting — bright, even, slightly warm. Genuine, self-confident, like a private moment. Camera is placed where the mirror is, as if we ARE the mirror.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** "Camera as mirror" perspective means the subject always faces the camera, which produces the best facial consistency. Natural, candid scenes are trending in AI video.
+- **Reference image (if I2V):** Woman in underwear, bathroom setting, looking at camera (as mirror), vanity lighting.
+
+#### 5.11 — Pool Exit
+
+```
+A woman in a barely-there white bikini climbs out of a swimming pool via the ladder. Water streams off her body as she emerges step by step. The wet white fabric becomes slightly transparent. She pushes wet hair back from her face and wrings water from her hair. Bright sunny day, turquoise pool water sparkles behind her. Camera at pool deck level, slightly low angle. Summer, vitality, energy. Slow motion water droplets.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** The pool ladder provides structural reference that helps maintain body proportions during the climbing motion. Wet fabric transparency is a natural NSFW element.
+- **Reference image:** Woman on pool ladder, wet white bikini, water streaming, bright sunlight.
+
+#### 5.12 — Candle Wax
+
+```
+A woman lies on her back on a dark surface, nude. A hand (could be her own) slowly tilts a lit red candle, and hot wax drips onto her stomach. She gasps slightly, muscles tensing visibly as each drop lands. Camera is positioned overhead, close-up on her torso where the wax is landing. Warm candlelight is the only illumination. Red wax creates abstract patterns on her skin. Dark, sensual, BDSM-adjacent. Extreme close-up, slow motion wax drip.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Wax dripping is a clear, gravity-driven motion that AI generates well. The close-up on torso avoids face/limb artifacts. Candlelight-only lighting creates dramatic mood with minimal complexity.
+- **Reference image:** Close-up of torso with some wax already dripped, red candle in frame, candlelight only.
+
+#### 5.13 — Feather Tease
+
+```
+Extreme close-up of a white feather being slowly dragged across a woman's bare stomach and hip. Her skin reacts with goosebumps as the feather passes. Her stomach muscles tense and release. The feather moves from her navel down to her hip bone and along the waistband of sheer panties. Only the torso and feather are visible. Soft diffused lighting from above. Tactile, sensory, ASMR aesthetic. Hyper-detailed skin texture.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Single prop interactions with body close-ups are the most reliable prompt type. The feather path gives the model clear directional movement to follow.
+- **Reference image:** Feather on woman's bare stomach, extreme close-up, soft overhead lighting, goosebumps.
+
+#### 5.14 — Towel Drop
+
+```
+A woman stands wrapped in a white bath towel in a steamy bathroom. She tucks the towel corner in at her chest, then lets go. The towel slowly slides down, she catches it at the last moment at her hips, revealing her bare torso. She looks at the camera with a mischievous expression. Warm bathroom lighting, steam in the air, dewy mirror behind her. Playful, teasing, well-timed. Medium shot, static camera.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** The towel drop is a classic NSFW sequence. Having her catch it partway creates a tease moment. The steamy bathroom softens the background.
+- **Reference image:** Woman in white towel, bathroom, steam, about to release towel tuck.
+
+#### 5.15 — Body Wave Dance
+
+```
+A woman in a micro bikini performs a slow, hypnotic body wave from head to toe. She stands in profile view so the wave motion is clearly visible — head, chest, stomach, hips rolling in sequence. Dark background with a single blue backlight creating a rim-light silhouette effect. Her body moves like a wave through water, continuous and fluid. Repeat the wave 2-3 times in the clip. Mesmerizing, loop-friendly. Club dance energy at half speed.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Body waves in profile are visually clear and create satisfying loopable content. The rim-light silhouette simplifies the generation while looking professional. Blue backlight is flattering on all skin tones.
+- **Reference image:** Woman in profile, micro bikini, mid-body-wave pose, blue backlight, dark background.
+
+---
+
+### Category 6: Professional / Commercial NSFW
+
+#### 6.1 — Lingerie Brand Commercial
+
+```
+A model walks down a minimalist white runway in a new collection of ivory lace lingerie — balconette bra, garter belt, and stockings. She walks with confident, measured strides. Camera tracks alongside her at hip height. Clean white background, professional fashion show lighting from above. Slow motion to capture fabric movement and detail. End with her pausing at the end of the runway, one hand on hip. High-end fashion brand commercial quality, Victoria's Secret runway energy.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Fashion runway walks are well-represented in training data. The tracking camera at hip height captures the lingerie effectively while creating smooth camera motion.
+- **Reference image:** Model mid-stride on white runway, lace lingerie set, fashion show lighting.
+
+#### 6.2 — Perfume Ad Sensuality
+
+```
+A woman in a barely-there gold dress lies across a marble surface in a luxury penthouse. She reaches for a crystal perfume bottle, brings it to her neck, and sprays. She tilts her head back in pleasure. The spray catches light like tiny diamonds. Camera starts on the perfume bottle in her hand, then slowly pulls back to reveal her full figure. Luxury brand commercial cinematography — dark, rich, decadent. Warm gold tones, sharp highlights on marble and glass.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Luxury product shots have a well-defined visual language that AI has learned. The perfume spray catching light creates a magical particle effect.
+- **Reference image:** Woman with perfume bottle, gold dress, marble surface, luxury penthouse setting.
+
+#### 6.3 — Swimwear Catalog
+
+```
+A model stands on white sand beach at midday, modeling a strappy red bikini. She performs a slow 360-degree turn, showing the suit from all angles. Sun is directly overhead creating minimal shadows. Crystal clear turquoise water behind her. Her hair blows slightly in ocean breeze. Shot like a professional e-commerce product video — clean, bright, focused on the garment. Full body framing with space around the figure. Color-accurate lighting.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Product/catalog-style videos work best with simple, bright, even lighting and full body framing. The 360 turn showcases the product effectively.
+- **Reference image:** Model on white beach in red bikini, straight standing pose, bright midday sun.
+
+#### 6.4 — Boudoir Photography BTS
+
+```
+Behind-the-scenes style video of a boudoir photography shoot. A woman in black lingerie poses on a tufted velvet chaise while a photographer (partially visible at frame edge) directs her. She shifts between poses — seated with crossed legs, then leaning back on one elbow, then looking over her shoulder. Multiple studio strobes fire, creating flash effects. The scene has the energy of a real photo shoot — professional, collaborative, confident. Mixed continuous and flash lighting.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** BTS-style content feels authentic and engaging. Flash effects can be simulated by mentioning "studio strobes fire" — this creates bright-frame moments that add production value.
+- **Reference image (if I2V):** BTS boudoir shoot, model on chaise, photographer partially visible, studio equipment.
+
+#### 6.5 — Magazine Cover Animation
+
+```
+A still magazine cover comes to life. The cover shows a woman in a plunging neckline gown. She blinks, takes a breath, and turns her head slightly, breaking the fourth wall. The magazine title and text remain static while only the model moves, creating a Harry Potter portrait effect. Glossy magazine aesthetics — perfect skin, editorial makeup, precise lighting. Subtle movement only — this is about the uncanny valley effect of a photo coming alive.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** "Living photo" style requires only minimal movement (blink, breath, small head turn), making it very easy to generate well. Use an actual magazine-style reference image for best results.
+- **Reference image:** High-quality magazine cover photo with model, editorial styling, text overlay.
+
+#### 6.6 — Fitness Brand Reveal
+
+```
+A fit woman in a sports bra and compression leggings stands in a gym with dramatic lighting. She slowly peels off the leggings, revealing toned legs, rolling the fabric down with both hands. Each muscle is defined under professional sports lighting. She then stands confidently in the sports bra and matching brief bottoms. Nike commercial quality, empowering, athletic beauty. Hard directional light creating muscle definition shadows.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Intermediate
+- **Pro tip:** Athletic/fitness content has a large training data base. The peeling-off motion is clear and directional. Emphasizing muscle definition through lighting language improves results.
+- **Reference image:** Fit woman in gym, mid-action of removing leggings, dramatic sports lighting.
+
+#### 6.7 — Hotel Room Promo
+
+```
+A luxury hotel room promotion video. A beautiful woman in a silk robe enters the frame and walks toward a large window overlooking a city skyline at night. She drops the robe off her shoulders, revealing lingerie underneath, and leans against the window frame, gazing at the city. Camera follows her from the door to the window in a single tracking shot. Luxury hospitality marketing quality — warm, aspirational, slightly provocative. Moody evening tones, city lights bokeh.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** The single tracking shot from door to window gives the model a clear camera path. Luxury hotel interiors are well-represented in training data. City skyline bokeh adds depth.
+- **Reference image:** Woman in silk robe entering luxury hotel room, city view window, evening.
+
+#### 6.8 — Jewelry Commercial
+
+```
+Extreme close-up beauty shot of a woman's neck and upper chest adorned with a diamond necklace. She breathes slowly, the necklace rising and falling. Light catches each facet of the diamonds, creating prismatic sparkles. Her skin is flawless, lit by a beauty dish from above. Camera very slowly pulls back to reveal more of the necklace and bare décolletage. Black background, all attention on the jewelry and skin. Tiffany commercial quality.
+```
+
+- **Model:** Wan 2.6 I2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Jewelry close-ups with breathing motion are simple and elegant. Wan 2.6's superior quality handles sparkle/prismatic effects best. Very commercial and shareable.
+- **Reference image:** Close-up neck/chest with diamond necklace, beauty dish lighting, black background.
+
+#### 6.9 — Body Lotion Application
+
+```
+A woman in a matching nude-tone bra and panty set sits on a white bed and applies body lotion to her legs. She squeezes lotion from a bottle into her palm, then slowly massages it into her calf and thigh with long upward strokes. Her skin takes on a healthy glow as the lotion absorbs. Camera follows her hands. Bright, clean beauty content lighting — soft and shadowless. Skincare brand commercial aesthetic, clean beauty vibes.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Product application videos are a huge commercial market. The repetitive stroking motion is easy for AI, and the result looks like legitimate brand content.
+- **Reference image:** Woman applying lotion to leg, nude underwear, white bed, bright beauty lighting.
+
+#### 6.10 — Fashion E-commerce Spin
+
+```
+A model stands on a turntable rotating slowly 360 degrees, wearing a sheer bodysuit with strategic opacity. Clean white e-commerce studio background. Arms relaxed at sides. The rotation reveals the garment from every angle. Bright, color-accurate product photography lighting from multiple softboxes. No distracting elements — pure product showcase. E-commerce product video standards, consistent exposure and white balance throughout rotation.
+```
+
+- **Model:** Wan 2.5 I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Beginner
+- **Pro tip:** Turntable rotation videos are a standard e-commerce format. The consistent lighting and white background simplify generation significantly. Highly practical and commercial.
+- **Reference image:** Model in sheer bodysuit, white background, standing straight, product photography lighting.
+
+---
+
+### Category 7: Anime / Hentai Style
+
+#### 7.1 — Onsen Bath Scene
+
+```
+Anime-style illustration of a woman with long blue hair relaxing in a traditional Japanese hot spring (onsen). Steam rises from the milky mineral water. She is submerged to her collarbone, bare shoulders visible. She closes her eyes and sighs contentedly, sinking deeper. Autumn maple leaves drift across the water surface. Traditional wooden fence and rocks in background. Warm color palette, detailed anime art with soft shading. Ghibli-quality background art, KyoAni-level character animation.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Onsen scenes are a classic anime trope with tons of training data. The water level provides natural censoring while remaining sensual. Specifying art studio styles (Ghibli, KyoAni) helps define the visual quality.
+- **Reference image (if I2V):** Anime woman in onsen, blue hair, autumn setting, 2D illustration style.
+
+#### 7.2 — Beach Episode Fanservice
+
+```
+Anime beach episode style. A busty anime girl in a tiny string bikini runs toward the camera on a sandy beach, breasts bouncing with the running motion. She trips and falls forward toward the camera with a surprised expression. Classic anime fanservice framing with speed lines and comedic effect. Bright, saturated summer colors. Cel-shaded animation style with clean outlines. Exaggerated anime proportions and physics. Beach umbrella and ocean sparkling in background.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** "Beach episode" is a well-known anime trope that AI has learned. Specifying "anime proportions" and "cel-shaded" keeps it in 2D animation territory. Physics exaggeration is expected in this style.
+- **Reference image (if I2V):** Anime girl in bikini on beach, running pose, 2D illustration, bright colors.
+
+#### 7.3 — Transformation Sequence
+
+```
+Anime magical girl transformation sequence but adult-themed. A woman's clothing dissolves in sparkles of light, leaving her momentarily nude with strategic light flares, before new fantasy armor materializes around her body piece by piece. Dynamic camera rotation around the figure. Intense magical energy particles. Dramatic pose at the end with a weapon. Sailor Moon transformation style but more mature. Vibrant magical effects, dynamic action lines, dramatic lighting shifts.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Transformation sequences are very popular and well-represented in training data. The magical particles and light effects provide natural coverage during the "nude" phase. Keep to one transformation direction.
+- **Reference image (if I2V):** Anime character mid-transformation, sparkle effects, dynamic pose, 2D style.
+
+#### 7.4 — Waifu Bedroom
+
+```
+Anime-style POV scene. A beautiful anime girl with pink hair and large eyes lies on a bed facing the viewer, wearing an oversized button-up shirt that's partially unbuttoned. She reaches one hand toward the camera with a gentle smile, as if beckoning. Her other hand rests on the pillow beside her head. Warm evening lighting from a bedside lamp. Soft, intimate framing. Detailed anime eyes with light reflections. Romantic visual novel CG quality, warm pastel color palette.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** POV waifu scenes are extremely popular in the anime AI community. The reaching hand creates a personal connection. Visual novel CG is a clear style reference. Simple hand movement is easy to generate.
+- **Reference image (if I2V):** Anime girl on bed, POV perspective, oversized shirt, reaching toward camera, 2D art.
+
+#### 7.5 — Tentacle Fantasy
+
+```
+Dark fantasy anime. A warrior woman in torn armor is partially restrained by glowing magical tentacles in a dungeon setting. The tentacles glow with bioluminescent patterns. She struggles against them, muscles tensed, expression defiant. Dark, atmospheric, with pools of colored light from the tentacles. Detailed anime illustration style with heavy shading. Gothic dark fantasy color palette — deep purples, blacks, glowing greens and blues. Dynamic composition with tentacles creating leading lines.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Tentacle animations work well in AI video because they're organic, flowing shapes. The bioluminescence adds dynamic lighting. Keep the scene more suggestive than explicit for best visual quality.
+- **Reference image (if I2V):** Anime warrior woman with glowing tentacles, dark fantasy, torn armor, 2D illustration.
+
+#### 7.6 — Locker Room Anime
+
+```
+Anime slice-of-life style. Two anime girls in a school locker room after gym class. One is pulling her gym shirt over her head, revealing a sports bra. The other is wrapping a towel around herself, having just removed her uniform. Lockers and benches in the background. Bright fluorescent locker room lighting. Comedic anime framing with one girl blushing and the other oblivious. Light-hearted, humorous fanservice. Clean anime line art with pastel shading.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Locker room scenes are a staple anime setting with clear visual conventions. Two-character anime scenes work better than two-character realistic scenes because the stylized aesthetic is more forgiving.
+- **Reference image (if I2V):** Anime locker room scene, two girls, gym clothes/towels, bright lighting, 2D style.
+
+#### 7.7 — Bathhouse Attendant
+
+```
+Anime-style illustration of a voluptuous woman in a traditional Japanese bathhouse, wearing only a small towel that barely covers her body. She kneels on the wet tile floor, wringing out a cloth over a wooden bucket. Steam fills the air. Water droplets on her skin. Traditional wood and stone bathhouse interior. She looks up at the viewer with a welcoming expression. Ukiyo-e inspired color palette — muted earth tones with pops of red and blue. Detailed background art, high-quality anime production values.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Traditional Japanese settings combined with anime style benefit from art historical references like ukiyo-e. The wringing-cloth motion is simple and effective.
+- **Reference image (if I2V):** Anime bathhouse attendant, small towel, traditional Japanese interior, kneeling, 2D art.
+
+#### 7.8 — Demon Girl Dance
+
+```
+Anime-style demon girl with red skin, small horns, bat wings, and a spade tail dances seductively in a fire-lit cave. She wears minimal black leather straps as clothing. Her tail sways rhythmically as she moves. Fire reflects off her skin. She spins, wings spreading wide, then wraps them around herself. Dark fantasy meets nightclub energy. Bold anime style with thick outlines and dramatic shading. Red, orange, and black color scheme. Dynamic animation with smear frames during fast movements.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 9:16
+- **Difficulty:** Advanced
+- **Pro tip:** Demon/monster girl designs are popular in the anime AI community. The fire provides dynamic lighting and animation. Specifying "smear frames" pushes the animation toward a more traditional 2D anime feel.
+- **Reference image (if I2V):** Anime demon girl dancing in firelit cave, red skin, horns, wings, 2D style.
+
+#### 7.9 — Ecchi Zero Gravity
+
+```
+Anime zero-gravity scene. An anime girl in a school uniform floats weightlessly in a spacecraft. Her skirt floats upward, revealing striped panties. Her hair fans out in zero-g. Loose papers and a pen float around her. She reaches for a floating coffee cup, stretching her body. Through the window, Earth is visible. Comedic, light-hearted ecchi. Clean modern anime style, high detail on fabric folds and hair. Smooth, dreamlike floating animation.
+```
+
+- **Model:** Wan 2.5 T2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Zero-gravity floating is naturally slow and dreamy, perfect for AI generation. Floating objects (papers, pen) add visual interest and are easy to animate. The ecchi element is classic and well-understood.
+- **Reference image (if I2V):** Anime girl floating in zero-g, school uniform, spacecraft interior, 2D illustration.
+
+#### 7.10 — Succubus Night Visit
+
+```
+Dark anime scene. A succubus with purple hair and glowing golden eyes hovers above a sleeping person, seen from above. Her translucent wings create shadow patterns on the bed below. She leans down slowly, long hair falling like a curtain. One finger touches the sleeper's lips. Moonlight through a window creates silver highlights on her pale skin. Atmospheric, romantic horror aesthetic. High-detail anime illustration with painterly background. Color palette: deep blues, purples, silver, and golden eye glow.
+```
+
+- **Model:** Wan 2.6 T2V
+- **Resolution:** 1080p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** The hovering/leaning motion is slow and controlled, ideal for AI. Moonlight creates a beautiful, limited color palette. The bird's-eye perspective is cinematic and unusual.
+- **Reference image (if I2V):** Anime succubus hovering over bed, moonlit room, purple hair, golden eyes, 2D art.
+
+---
+
+### Category 8: Extreme / Explicit
+
+> **Note:** These prompts contain explicit sexual content. Use Wan 2.2 Spicy for best explicit content generation. Keep duration short (5s) for best quality.
+
+#### 8.1 — Solo Touch
+
+```
+A nude woman lies on a bed on her back, knees bent, one hand slowly moving down her body from her chest to her lower abdomen. Her back arches slightly, head pressing back into the pillow. Eyes closed, lips parted, expression of pleasure. Camera at mattress level, side angle. Warm amber bedroom lighting from one source. Tangled white sheets around her. Intimate, authentic, natural body movement. Shallow depth of field keeping focus on her face and hand.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** For explicit solo content, keep the camera at one angle. Side-angle lying poses produce the most anatomically consistent results. The hand movement should follow a clear path.
+- **Reference image:** Nude woman lying on bed, hand on chest, warm lighting, side angle, artistic boudoir photo.
+
+#### 8.2 — From Behind Pose
+
+```
+Medium shot from slightly above. A woman on all fours on a bed, facing away from camera. She looks back over her shoulder toward the camera with an inviting expression. She arches her back, creating a pronounced curve from shoulders to hips. Sheets are gathered around her knees. Warm soft lighting from above. Her hair falls over one shoulder. Cinematic quality, fashion boudoir aesthetic. Slow, subtle movement — she sways slightly, maintaining eye contact over her shoulder.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** The all-fours pose is well-understood by NSFW-trained models. Over-the-shoulder eye contact adds emotional connection. Keep the motion minimal.
+- **Reference image:** Woman on all fours on bed, looking back over shoulder, warm lighting, boudoir style.
+
+#### 8.3 — Riding Position
+
+```
+A woman straddles a man who is lying on his back. She is upright, hands on his chest, slowly rolling her hips in a rhythmic motion. Both are nude. Camera at mattress level from the side, showing both figures in profile. Her hair moves with the rhythm. Warm candlelight creates moving shadows. White sheets, dark room. Intimate, passionate. Focus on the hip motion and facial expression. Medium shot including both torsos.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Two-person explicit scenes are the most challenging. Side profile angle is essential. Keep duration to 5s maximum. Rhythmic hip motion is the single movement to focus on.
+- **Reference image:** Side-view silhouette or artistic photo of woman in straddling position, candlelight, boudoir aesthetic.
+
+#### 8.4 — Breast Reveal Close-Up
+
+```
+Extreme close-up of a woman's chest as she slowly pulls down the cups of a black lace bra, revealing her breasts. She cups them with both hands. Camera is at chest level, straight-on framing. Only her chest and hands are in frame — no face. Warm soft light from above and to the right. Skin has natural texture and tone. Simple dark background. The gesture is slow, confident, deliberate. High detail, sharp focus, beauty photography quality lighting.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Body-part close-ups without face are the most reliable explicit content. The bra-removal motion is a single directional movement that generates consistently. No face = no face distortion.
+- **Reference image:** Close-up of chest in black lace bra, hands on cups, warm lighting, dark background.
+
+#### 8.5 — Doggy Position
+
+```
+Two figures on a bed from a side-view camera angle. The woman is on her hands and knees, the man behind her. Both bodies move in synchronized rhythmic motion. Camera is at mattress level, medium-wide shot showing both full profiles. Dimly lit bedroom, warm tones. Sheets are crumpled beneath them. Focus on the rhythmic movement and body dynamics. Cinematic, warm color grading, shallow depth of field softening the background.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Always use side-profile for explicit couple scenes. The rhythmic motion should be clearly described as synchronized. Dim lighting is forgiving. Wan 2.2 Spicy is the only reliable model for this level of explicit content.
+- **Reference image:** Artistic side-view boudoir photo of couple in position, dim warm lighting.
+
+#### 8.6 — Spread Pose
+
+```
+A woman lies on her back on white sheets, slowly parting her legs while the camera captures from a slightly elevated front-facing angle. She wears thigh-high stockings, nothing else. Her hands rest on her inner thighs. She bites her lower lip. Soft, diffused lighting from a large overhead softbox. Clean, bright, high-key aesthetic. Beauty photography quality — flawless lighting and skin. Slow, controlled movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** High-key bright lighting actually works better than dark moody lighting for explicit anatomy — it gives the model more visual information to work with. Stockings provide a visual anchor for the legs.
+- **Reference image:** Woman on white sheets, thigh-highs, bright lighting.
+
+#### 8.7 — POV Oral
+
+```
+POV perspective looking down. A woman kneels on the floor between the viewer's legs, looking up at the camera with large eyes. She holds onto the viewer's thighs. Her head moves in a slow, rhythmic forward-and-back motion. Her hair sways with the movement. Camera is handheld POV with slight natural shake. Dimly lit room, her face lit from above. Intense eye contact maintained. Realistic, intimate POV aesthetic.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** POV explicit scenes are challenging because the face must remain consistent while moving. Keep the motion extremely subtle — more implied than explicit works better. The eye contact and head motion suggest the action without requiring anatomical detail.
+- **Reference image:** POV-angle photo of woman looking up at camera, kneeling, warm lighting.
+
+#### 8.8 — Missionary Close-Up
+
+```
+Close-up side view of two bodies in missionary position. The camera frames from their chests to mid-thigh from the side. Rhythmic motion of the man's body. Her legs wrap around his waist. Her fingernails press into his back. Sweat glistens on both bodies. Only their torsos are visible — no faces in frame. Warm, dark, intimate lighting. The close framing and lack of faces makes this abstract, almost sculptural. Slow, steady rhythm.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Advanced
+- **Pro tip:** Removing faces from explicit couple scenes dramatically improves quality. The side-view torso framing reduces the scene to rhythmic motion of forms, which AI handles better than full anatomical detail. Sweat descriptions add realism.
+- **Reference image:** Artistic close-up of two torsos, side view, intimate lighting, abstract framing.
+
+#### 8.9 — Climax Expression
+
+```
+Extreme close-up of a woman's face during climax. Her eyes squeeze shut, mouth opens, head tilts back. Muscles in her neck tense. A flush spreads across her cheeks. One hand grips the pillow beside her head. Slow motion captures every micro-expression. Camera very close, face filling the frame. Warm soft lighting from one side. The focus is entirely on her expression — nothing else visible. Raw, authentic, emotional. Hyper-detailed, every pore and eyelash visible.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Intermediate
+- **Pro tip:** Face-only clips are much easier than full-body explicit content. The expression sequence (tension to release) is a clear emotional arc. Use a high-quality face photo as reference.
+- **Reference image:** Close-up photo of woman's face, eyes closed, expression of pleasure, warm side lighting.
+
+#### 8.10 — Walking Away
+
+```
+Close-up tracking shot following a nude woman's hips and buttocks as she walks slowly away from the camera. Each step creates natural movement in her glutes and thighs. Camera at hip height, tight framing on her lower body only. She walks down a hallway — no face visible, just her lower body in motion. Warm side lighting creates shadows that define muscle tone. Slow motion, detailed, hyper-realistic. Clean background, attention entirely on the body movement.
+```
+
+- **Model:** Wan 2.2 Spicy I2V
+- **Resolution:** 720p | **Duration:** 5s | **Aspect Ratio:** 16:9
+- **Difficulty:** Beginner
+- **Pro tip:** Walking-away shots are one of the easiest explicit prompts — the motion is natural and well-understood, and no face is involved. The tracking camera follows a simple straight line.
+- **Reference image:** Close-up of hips/buttocks from behind, walking pose, warm side lighting, hallway background.
+
+---
+
+## Prompt Engineering Deep Dive
+
+### Keywords That Work Well
+
+**Body descriptions:**
+- Specific terms: "slender waist," "athletic build," "curvy hips," "toned abs," "full bust," "petite frame"
+- Skin descriptions: "sun-kissed skin," "porcelain skin," "olive complexion," "dark mahogany skin," "freckled," "oiled/glistening"
+- Avoid vague terms like "hot body" or "sexy figure" — be specific about what makes it attractive
+
+**Camera language that AI understands:**
+
+| Term | Effect |
+|------|--------|
+| `push in` | Camera moves toward subject |
+| `pull back / dolly out` | Camera moves away from subject |
+| `tracking shot` | Camera follows subject laterally |
+| `pan left/right` | Camera rotates horizontally |
+| `tilt up/down` | Camera rotates vertically |
+| `static camera` | Camera doesn't move |
+| `handheld` | Slight natural shake |
+| `drone shot` | High, sweeping, smooth |
+| `POV` | First-person perspective |
+| `low angle` | Camera below subject, looking up |
+| `high angle` | Camera above subject, looking down |
+| `bird's eye / overhead` | Directly above looking straight down |
+| `Dutch angle` | Camera tilted diagonally |
+| `rack focus` | Focus shifts from one subject to another |
+| `shallow DOF` | Blurred background, sharp subject |
+
+**Lighting setups for different moods:**
+
+| Mood | Lighting Description |
+|------|---------------------|
+| Romantic | "Warm candlelight, golden tones, soft diffused" |
+| Dramatic | "Single hard light source, deep shadows, chiaroscuro" |
+| Ethereal | "Backlit, overexposed highlights, hazy, bloom effect" |
+| Raw/Gritty | "Harsh overhead fluorescent, unflattering, direct" |
+| Luxury | "Multiple soft sources, no harsh shadows, beauty dish" |
+| Mysterious | "Rim light only, face in shadow, silhouette" |
+| Natural | "Window light, golden hour, ambient, no artificial" |
+
+**Motion keywords ranked by reliability:**
+
+1. **Most reliable:** breathing, blinking, hair blowing, fabric billowing, water flowing, smoke drifting
+2. **Reliable:** slow turn, head tilt, hand movement, walking, swaying
+3. **Moderate:** dancing, stretching, undressing, running
+4. **Challenging:** complex choreography, two-person interaction, transformation
+5. **Hardest:** rapid action, multiple simultaneous movements, physics-defying motion
+
+### How to Avoid Common Artifacts
+
+| Artifact | Prevention Strategy |
+|----------|-------------------|
+| Extra fingers/limbs | Keep hands out of frame or in simple poses (fist, flat, gripping) |
+| Face distortion | Use blindfolds, back-to-camera, silhouettes, or close-up body shots |
+| Body morphing | Shorter clips (5s), simpler motions, single-person scenes |
+| Flickering | Add "smooth, consistent lighting" to prompt; avoid complex multi-source lighting |
+| Background warping | Simple backgrounds (solid color, blurred bokeh); static camera |
+| Clothing inconsistency | Describe specific, simple garments; avoid complex patterns |
+| Anatomy errors | Side-profile views for full body; close-ups for specific body parts |
+| Two-person merge | Clear separation between figures; side-view; different clothing colors |
+
+### Negative Prompt Strategies
+
+For models that support negative prompts:
+
+```
+deformed, distorted, disfigured, bad anatomy, extra limbs, extra fingers,
+mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, blurry,
+low quality, watermark, text, logo, signature, extra arms, extra legs, fused fingers,
+too many fingers, long neck, cross-eyed, worst quality, jpeg artifacts
+```
+
+**NSFW-specific negatives:**
+```
+unrealistic proportions, plastic skin, mannequin, doll-like, uncanny valley,
+airbrushed skin, unnatural body position, broken spine, impossible pose, floating limbs,
+disconnected body parts, misaligned anatomy, asymmetric features
+```
+
+### Duration Optimization
+
+| Content Type | Optimal Duration | Why |
+|-------------|-----------------|-----|
+| Simple pose/breathing | 3-5s | Minimal motion, quality preserved |
+| Single gesture (hand, head turn) | 5s | One clear action |
+| Walking/simple movement | 5s | Consistent motion |
+| Dance/complex movement | 5s | Longer = more artifacts |
+| Two-person scenes | 5s max | Complexity demands short clips |
+| Explicit scenes | 5s max | Anatomy consistency degrades over time |
+| Looping content | 3-5s | Design for seamless loop |
+
+**Rule of thumb:** When in doubt, choose 5 seconds. Quality always beats length. You can stitch clips together in post-production.
+
+---
+
+## Workflow: Image-to-Video NSFW Pipeline
+
+### Step 1: Generate Reference Image
+
+Use **Flux Dev** or **Seedream** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) — both are NSFW capable.
+
+**Tips for reference images:**
+- Generate the exact pose you want as the starting frame
+- Match the lighting described in your video prompt
+- Include the exact clothing/state of undress you want
+- Higher resolution reference = better video quality
+- Avoid complex backgrounds — they can confuse the I2V model
+
+**Example image prompt for Flux Dev:**
+```
+Professional boudoir photography of a woman in black lace lingerie lying on a bed.
+Warm golden lamp light from the side. Shallow depth of field. 35mm film aesthetic.
+She looks directly at camera with a subtle smile. High quality, detailed, realistic.
+```
+
+### Step 2: Animate with Wan 2.2 Spicy I2V ($0.03/request)
+
+Take your generated image and pair it with a motion prompt:
+
+```
+She slowly arches her back and runs one hand through her hair, then turns
+her head to look over her shoulder. Smooth, slow movement. Cinematic quality.
+```
+
+**I2V best practices:**
+- The video prompt should describe MOTION, not appearance (appearance comes from the image)
+- Keep motion descriptions simple and directional
+- Avoid contradicting the reference image (don't describe different clothing)
+- Specify camera movement separately from subject movement
+
+### Step 3: Iterate and Refine
+
+- Generate 3-5 variations of the same prompt to pick the best one
+- At $0.03/request, 5 attempts = $0.15 — still extremely cheap
+- Small wording changes can dramatically affect results
+- Try different reference images with the same prompt
+
+### Step 4: Post-Processing
+
+- **Upscale** with Real-ESRGAN or Topaz Video AI for higher resolution
+- **Slow motion** in post can smooth any jerkiness
+- **Color grade** in DaVinci Resolve (free) for a professional look
+- **Stitch clips** together for longer sequences
+- **Add audio** — music, ambient sound, or use Seedance v1.5 for built-in audio sync
+
+---
+
+## API Quick Start
+
+### cURL
+
+```bash
+# 使用 Atlas Cloud API 生成 NSFW 视频
+curl -s -X POST "https://api.atlascloud.ai/v1/predictions" \
+  -H "Authorization: Bearer $ATLAS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "wan-2.2-spicy-i2v",
+    "input": {
+      "prompt": "She slowly arches her back and runs one hand through her hair. Smooth cinematic movement, warm lighting.",
+      "image": "https://your-image-url.com/reference.jpg",
+      "duration": 5,
+      "resolution": "720p",
+      "aspect_ratio": "16:9"
+    }
+  }'
+```
+
+### Python
 
 ```python
 """
-NSFW AI Video Generation — Complete Python Example
-Supports: Wan 2.2 Spicy, Wan 2.5/2.6, Seedance, Vidu, Kling
-Platform: Atlas Cloud (https://www.atlascloud.ai?ref=JPM683)
+使用 Atlas Cloud API 批量生成 NSFW 视频的示例脚本
 """
-
 import requests
 import time
-import os
 
-API_KEY = os.environ.get("ATLAS_API_KEY", "your_api_key_here")
+# Atlas Cloud API 配置
+API_KEY = "your_api_key_here"
 BASE_URL = "https://api.atlascloud.ai/v1"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
@@ -143,1883 +1517,163 @@ HEADERS = {
 }
 
 
-def generate_nsfw_video(prompt: str, model: str = "alibaba/wan-2.2-spicy/image-to-video",
-                        image_url: str = None, resolution: str = "720p",
-                        duration: int = 5) -> str:
+def generate_nsfw_video(prompt: str, image_url: str = None, model: str = "wan-2.2-spicy-i2v"):
     """
-    Generate an NSFW video using Atlas Cloud API.
+    生成单个 NSFW 视频
 
-    Args:
-        prompt: Video generation prompt (detailed description of scene)
-        model: Model identifier on Atlas Cloud
-        image_url: Reference image URL (required for I2V models)
-        resolution: Output resolution ("480p", "720p", "1080p")
-        duration: Video duration in seconds
-
-    Returns:
-        Video URL string
+    参数:
+        prompt: 视频生成提示词
+        image_url: 参考图片 URL（I2V 模型需要）
+        model: 使用的模型名称
     """
     payload = {
         "model": model,
         "input": {
             "prompt": prompt,
-            "resolution": resolution,
-            "duration": duration,
+            "duration": 5,
+            "resolution": "720p",
+            "aspect_ratio": "16:9"
         }
     }
 
-    # Add reference image for image-to-video models
+    # 如果是 I2V 模型，添加参考图片
     if image_url:
         payload["input"]["image"] = image_url
 
-    # Submit generation request
-    response = requests.post(
-        f"{BASE_URL}/predictions",
-        headers=HEADERS,
-        json=payload
-    )
-    response.raise_for_status()
-    prediction_id = response.json()["id"]
-    print(f"Submitted: {prediction_id}")
+    # 创建预测任务
+    response = requests.post(f"{BASE_URL}/predictions", headers=HEADERS, json=payload)
+    prediction = response.json()
+    prediction_id = prediction["id"]
+    print(f"任务已创建: {prediction_id}")
 
-    # Poll for completion
-    for _ in range(120):  # 10 minute timeout
-        time.sleep(5)
-        result = requests.get(
-            f"{BASE_URL}/predictions/{prediction_id}",
-            headers=HEADERS
-        ).json()
+    # 轮询等待结果
+    while True:
+        result = requests.get(f"{BASE_URL}/predictions/{prediction_id}", headers=HEADERS).json()
+        status = result["status"]
 
-        status = result.get("status")
         if status == "succeeded":
-            video_url = result.get("output", {}).get("video")
-            if isinstance(result.get("output"), list):
-                video_url = result["output"][0]
-            print(f"Done! Video: {video_url}")
+            video_url = result["output"]["video"]
+            print(f"视频生成成功: {video_url}")
             return video_url
-        elif status in ("failed", "canceled"):
-            raise RuntimeError(f"Generation failed: {result.get('error', 'Unknown')}")
+        elif status == "failed":
+            print(f"生成失败: {result.get('error', '未知错误')}")
+            return None
 
-    raise TimeoutError("Generation timed out after 10 minutes")
+        print(f"状态: {status}，等待中...")
+        time.sleep(3)
 
 
-# ── Example Usage ──────────────────────────────────────────────────
-if __name__ == "__main__":
-    prompt = (
-        "A woman in a sheer silk robe stands by a floor-to-ceiling window at golden hour. "
-        "She slowly turns toward the camera, the robe sliding off one shoulder. "
-        "Warm sunlight traces the contours of her body. "
-        "Shallow depth of field, cinematic color grading, slow sensual motion."
-    )
-
-    video = generate_nsfw_video(
-        prompt=prompt,
-        model="alibaba/wan-2.2-spicy/image-to-video",
-        image_url="https://example.com/reference.jpg",
-        resolution="720p",
-        duration=5
-    )
-```
-
-### cURL — Quick Test
-
-```bash
-# Submit NSFW video generation
-curl -s -X POST "https://api.atlascloud.ai/v1/predictions" \
-  -H "Authorization: Bearer $ATLAS_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "alibaba/wan-2.2-spicy/image-to-video",
-    "input": {
-      "image": "https://example.com/reference.jpg",
-      "prompt": "The woman reclines on silk sheets, arching her back slowly. Soft warm studio lighting. Her fingers trace along her collarbone. Cinematic, shallow depth of field.",
-      "resolution": "720p",
-      "duration": 5
-    }
-  }'
-
-# Poll result (replace PREDICTION_ID with the returned id)
-curl -s "https://api.atlascloud.ai/v1/predictions/PREDICTION_ID" \
-  -H "Authorization: Bearer $ATLAS_API_KEY"
-```
-
----
-
-## Prompt Engineering Fundamentals
-
-Before diving into the prompt library, understand these principles that make the difference between a mediocre result and a stunning one.
-
-### The 6-Component NSFW Video Prompt Formula
-
-Every high-quality NSFW video prompt should contain these components in order:
-
-```
-[SUBJECT] + [ACTION/MOTION] + [SETTING/ENVIRONMENT] + [LIGHTING] + [CAMERA] + [STYLE/MOOD]
-```
-
-| Component | Purpose | Example |
-|:----------|:--------|:--------|
-| **Subject** | Who/what is in the scene | "A tall woman with long dark hair and olive skin" |
-| **Action/Motion** | What happens (critical for video) | "slowly removes her dress, letting it fall to the floor" |
-| **Setting** | Where the scene takes place | "in a minimalist loft apartment with exposed brick walls" |
-| **Lighting** | Dramatically affects mood and skin rendering | "warm golden hour light streaming through venetian blinds" |
-| **Camera** | How the scene is framed | "medium shot, slight low angle, shallow depth of field" |
-| **Style/Mood** | Overall aesthetic and emotional tone | "cinematic, sensual, intimate atmosphere" |
-
-### NSFW-Specific Tips
-
-**1. Be explicit about anatomy when needed**
-- Bad: "She takes off her clothes"
-- Good: "She slowly unbuttons her blouse from top to bottom, revealing a black lace bralette underneath. The fabric parts to show her midriff and décolletage."
-
-**2. Describe motion in temporal sequence**
-- Bad: "She dances seductively"
-- Good: "She sways her hips left and right in a slow rhythm, raises her arms above her head, then slowly runs her hands down along her body from chest to thighs."
-
-**3. Lighting is your best friend for skin rendering**
-- "Soft diffused studio lighting with a warm key light at 45 degrees" produces better skin than "bright lighting"
-- "Rim lighting highlighting body contours" creates dramatic silhouettes
-- "Candlelight" adds warmth but reduces detail
-
-**4. Specify what NOT to do (negative prompting)**
-- Add: "No morphing, no distortion, no extra limbs, consistent body proportions throughout"
-- For faces: "Consistent facial features, no face warping between frames"
-
-**5. Duration affects prompt complexity**
-- 5s videos: describe 1-2 actions max
-- 8-10s videos: can handle 2-3 sequential actions
-- 15s videos: describe a mini-narrative with 3-4 beats
-
-### Model-Specific Prompt Length Guidelines
-
-| Model | Optimal Prompt Length | Notes |
-|:------|:---------------------|:------|
-| Wan 2.2 Spicy | 40–80 words | Shorter prompts reduce artifacts |
-| Wan 2.5/2.6 | 60–120 words | Handles complex descriptions well |
-| Seedance v1.5 | 80–150 words | Benefits from detailed descriptions |
-| Vidu Q3-Pro | 50–100 words | Good at interpreting concise prompts |
-| Kling v3.0 Pro | 60–120 words | Best face results with detailed face descriptions |
-
----
-
-## Category 1: Romantic & Sensual (20 Prompts)
-
-These prompts focus on intimacy, emotional connection, and sensuality. Best results with: **Wan 2.6**, **Kling v3.0 Pro**, **Seedance v1.5 Pro**.
-
-### RS-01: Golden Hour Window
-
-```
-A woman with sun-kissed skin and wavy auburn hair stands barefoot by an open window,
-wearing only a loose white linen shirt that reaches mid-thigh. A warm breeze pushes the
-sheer curtains inward, pressing the fabric against her body and revealing her silhouette.
-She closes her eyes, tilts her head back, and inhales deeply, her chest rising. The golden
-hour sun creates a warm halo around her figure. Medium shot, soft focus background,
-cinematic color grading with warm amber tones.
-```
-
-### RS-02: Morning After
-
-```
-Close-up transitioning to medium shot. A woman lies on rumpled white sheets, bare shoulders
-and upper back visible. She slowly rolls onto her side, pulling the sheet loosely across
-her chest. Morning light filters through sheer curtains, casting soft shadows across her
-skin. She reaches one arm above her head and stretches languidly, the sheet slipping to
-reveal her waist. Sleepy, satisfied expression. Warm, intimate atmosphere. Shallow depth
-of field on her face.
-```
-
-### RS-03: Candlelit Bath
-
-```
-A woman reclines in a freestanding clawfoot bathtub filled with milky water and rose petals.
-Dozens of candles surround the tub on the marble floor. She lifts one leg slowly out of the
-water, water droplets catching the candlelight as they trail down her shin. She runs a hand
-along her wet collarbone. Steam rises softly. Warm amber lighting, overhead wide shot slowly
-pushing in to a medium close-up. Relaxed, luxurious mood.
-```
-
-### RS-04: Rain on the Balcony
-
-```
-A woman in a soaked white tank top and cotton shorts stands on a balcony during a warm
-summer rainstorm. The wet fabric clings to every curve of her body, becoming translucent.
-She tilts her face up to the rain, eyes closed, water streaming down her neck and chest.
-She slowly pushes wet hair back from her face with both hands, arching her back slightly.
-Moody blue-grey sky in the background, warm skin tones. Medium shot, slight upward angle.
-```
-
-### RS-05: Silk Robe Drop
-
-```
-A woman with sleek black hair stands in a dimly lit bedroom. She is wearing a burgundy
-silk robe loosely tied at the waist. She slowly pulls the sash, the robe falling open to
-reveal a matching silk slip underneath that barely reaches her upper thighs. She lets the
-robe slide off her shoulders and drop to the floor. Side lighting from a bedside lamp
-creates dramatic shadows along her figure. Slow, deliberate movement. Tight medium shot
-from the waist up, then tilts down as the robe falls.
-```
-
-### RS-06: Couple Embrace in Shower
-
-```
-A couple stands together under a large rainfall shower head. Water cascades over both
-bodies. The man stands behind the woman, his arms wrapped around her waist. She leans
-her head back against his chest, eyes closed. Water streams between their bodies. Both
-are shown from the shoulders up and waist. Steam fills the glass enclosure. Warm soft
-lighting. Slow motion water droplets. Intimate, tender atmosphere. Shot through the
-slightly fogged glass door.
-```
-
-### RS-07: Beach at Dusk
-
-```
-A woman in a tiny black bikini walks along the shoreline at sunset. Waves lap at her
-ankles. She pauses, facing the ocean, and slowly reaches behind her back to untie the
-bikini top. She holds it in one hand at her side, back to camera, silhouetted against
-the orange and purple sky. Her long hair blows in the sea breeze. Wide shot with the
-sun low on the horizon. Warm cinematic color grading. Peaceful, free, confident energy.
-```
-
-### RS-08: Mirror Reflection
-
-```
-A woman stands before a large ornate floor mirror in her bedroom, wearing only matching
-black lace underwear. She turns slowly, examining herself from different angles. She runs
-her fingertips along her hip and up her ribcage. The camera captures both her and her
-reflection simultaneously, creating a dual perspective. Soft warm side lighting from a
-lamp off-screen. Medium full-body shot. Self-assured, appreciative expression. Intimate
-boudoir atmosphere.
-```
-
-### RS-09: Massage Table
-
-```
-A woman lies face down on a massage table, a white sheet draped low across her hips. Her
-bare back glistens with massage oil. A pair of hands enters the frame, pressing firmly
-along her spine from lower back to shoulders. She exhales deeply, her shoulder blades
-shifting under the skin. Oil catches the warm overhead light. Close-up on hands working
-muscle groups, then pulls back to a medium shot. Relaxing ambient mood. Soft focused
-background.
-```
-
-### RS-10: Fireplace Evening
-
-```
-A woman sits on a plush fur rug in front of a roaring fireplace, wearing an oversized
-knit sweater and nothing else. She draws her bare legs up to one side, the sweater riding
-up to her upper thighs. She holds a glass of red wine, takes a slow sip, and gazes into
-the fire. Warm flickering firelight dances across her skin and legs. The room is otherwise
-dark. Tight medium shot. Cozy, seductive atmosphere. Shallow depth of field with bokeh
-from the fire.
-```
-
-### RS-11: Dance Floor Sway
-
-```
-Low-key club lighting with deep purple and blue tones. A woman in a backless sequined
-mini dress moves her body in a slow, hypnotic rhythm. She runs one hand down her neck to
-her chest as she sways. Her back is arched, hips moving in a figure-eight pattern. Sweat
-glistens on her shoulders and décolletage. Slow motion captures the fabric catching the
-light. Medium shot from slightly below eye level. Smoky, charged atmosphere.
-```
-
-### RS-12: Outdoor Hot Spring
-
-```
-A woman sits in a natural hot spring pool surrounded by snow-covered rocks and pine trees.
-Steam rises thickly around her. She is submerged to her collarbone. She slowly stands up
-in the pool, water cascading off her body, revealing her bare shoulders, back, and waist
-as she rises. She wrings out her long wet hair. Misty mountain backdrop. Natural overcast
-lighting. Wide establishing shot transitioning to medium shot as she stands. Serene,
-ethereal mood.
-```
-
-### RS-13: Vintage Boudoir
-
-```
-Styled as a 1940s glamour photograph come to life. A woman with victory rolls hairstyle
-and red lipstick reclines on a chaise longue wearing a vintage corset, garter belt, and
-seamed stockings. She slowly extends one leg upward, pointing her toe, running her hand
-along the stocking from ankle to thigh. Soft focus lens effect. Warm sepia-toned lighting.
-Medium shot with slight Dutch angle. Old Hollywood glamour aesthetic.
-```
-
-### RS-14: Rooftop Sunset Undress
-
-```
-A woman stands alone on an urban rooftop at sunset, city skyline in the distance. She is
-wearing a flowing summer dress. She reaches down, grabs the hem, and slowly lifts the dress
-up and over her head in one fluid motion, revealing a simple nude-toned bra and underwear.
-She tosses the dress aside and stands with arms slightly open, facing the setting sun.
-Wind catches her hair. Wide shot with shallow depth of field on the city background.
-Liberating, confident mood.
-```
-
-### RS-15: Silk Sheet Tease
-
-```
-A woman lies on dark navy silk sheets, her body partially concealed and partially revealed
-by the fabric. She slowly pulls the sheet downward from her collarbone, revealing her bare
-chest, while simultaneously drawing one knee up, the sheet draping between her legs. She
-bites her lower lip subtly and maintains eye contact with the camera. Overhead bird's eye
-view slowly rotating. Single dramatic spotlight creating deep shadows. Provocative, intense.
-```
-
-### RS-16: Couple Slow Dance
-
-```
-A couple in a dimly lit living room dances slowly, no music audible. She wears only his
-unbuttoned dress shirt, which hangs to mid-thigh. He is shirtless in dress pants. His
-hands rest on her bare hips beneath the shirt. She has her arms around his neck. They move
-in a slow circle, foreheads touching. The shirt rides up as they turn. Single warm light
-source from a floor lamp. Tight two-shot. Deeply intimate, romantic energy. Shallow depth
-of field.
-```
-
-### RS-17: Pool Emergence
-
-```
-Slow motion. A woman emerges from a turquoise swimming pool, climbing out via the ladder.
-She wears a white one-piece swimsuit that has become completely see-through from the water.
-Water streams off her body as she rises. She pushes her wet hair back with both hands, back
-arched, face tilted toward the sun. Crystal water droplets catch the bright midday sunlight.
-Low angle shot from water level. Vibrant summer color palette. Confident, carefree energy.
-```
-
-### RS-18: Getting Dressed Reverse
-
-```
-Time-reversed sequence played forward. A woman appears to be slowly getting undressed,
-but the motion is natural. She stands before a closet mirror, unzipping a tight cocktail
-dress from the back. The zipper slowly descends, revealing bare skin down her spine. She
-slides the dress down past her hips and steps out of it, standing in just a strapless bra
-and thong. She unclasps the bra from behind. Camera follows the dress down, then pans back
-up her body. Bedroom lighting, warm tones.
-```
-
-### RS-19: Yoga Flow
-
-```
-A woman performs a sensual yoga flow on a mat in a sunlit studio with floor-to-ceiling
-windows. She wears only tiny yoga shorts and a sports bra. She transitions from downward
-dog — the camera behind and slightly below her, capturing her stretched form — into cobra
-pose, arching her back deeply, chest forward, looking upward. Then flows into pigeon pose,
-one leg stretched behind, torso upright, hands on her thigh. Smooth continuous motion.
-Natural daylight. Full-body medium shot. Athletic, graceful, sensual.
-```
-
-### RS-20: Whisper Close
-
-```
-Extreme close-up on a woman's face and neck. She is lying down, looking up at someone
-off-camera above her. She whispers something inaudible, lips parting, eyes half-closed.
-A man's hand enters the frame, gently tracing a line from her ear, down her jaw, along
-her neck, to her collarbone. She tilts her chin up at his touch, exposing her throat. Her
-breathing visibly quickens. Very soft focus. Warm, dim lighting. Airy, breathy, electric
-tension. Macro lens effect.
-```
-
----
-
-## Category 2: Artistic Nude & Figure Study (15 Prompts)
-
-Classical fine-art inspired prompts focused on the human form. Best results with: **Wan 2.6**, **Seedance v1.5 Pro**, **Kling v3.0 Pro**.
-
-### AN-01: Chiaroscuro Study
-
-```
-A nude woman stands in profile against a completely black background, lit by a single
-harsh directional light from the upper left, creating deep Caravaggio-style chiaroscuro.
-She slowly raises her arms in an arc above her head, fingers spread, each muscle and
-tendon in her torso becoming visible as she stretches. Light catches only the ridgeline
-of her body — shoulder, breast, hip, thigh — while everything else falls to pure black.
-Slow, deliberate movement like a living sculpture. Full-body profile shot. Fine art
-aesthetic, museum-quality composition.
-```
-
-### AN-02: Body Landscape
-
-```
-Extreme close-up macro cinematography of a nude female torso, shot so closely that the
-body becomes an abstract landscape. Camera slowly pans across skin terrain — the valley
-of the collarbone, the gentle slope of the breast, the plateau of the stomach, the ridge
-of the hip bone. Skin texture is visible at pore level. Warm side lighting creates
-topographic shadows. The body rises and falls with slow breathing. No face visible.
-Abstract, meditative, sculptural. Shot on macro lens with extremely shallow depth of field.
-```
-
-### AN-03: Contrapposto in Motion
-
-```
-A nude woman with athletic build demonstrates a slow transition between classical sculpture
-poses. She begins in a Venus de Milo stance — weight on one leg, torso twisted, one arm
-across her chest. She slowly shifts her weight, rotating her body into a Contrapposto pose,
-hip jutted to one side, shoulders counter-tilted. Her arms move to a Botticelli Venus
-position — one arm across her breasts, one hand covering her pubic area. Neutral grey
-studio background. Even, shadowless lighting. Full body shot. Classical antiquity aesthetic.
-```
-
-### AN-04: Fabric and Form
-
-```
-A nude woman stands in a white void studio, holding a 15-foot length of sheer white chiffon.
-She lets the fabric unfurl and flow around her body as she turns slowly. The fabric alternately
-reveals and conceals different parts of her form — wrapping around her torso, draping over
-one shoulder, trailing between her legs. She pulls it taut against her body, then releases
-it to billow. High-speed camera captures fabric in slow motion. Bright, even studio lighting.
-Full body, multiple angles as she rotates. Dance-like, ethereal, Isadora Duncan inspired.
-```
-
-### AN-05: Water Sculpture
-
-```
-A nude woman stands under a controlled stream of water falling from above onto her head and
-shoulders. Her eyes are closed, face serene. Water cascades over her body, following every
-contour — splitting around her breasts, converging at her navel, streaming down her legs.
-Shot in slow motion to capture individual water trails on skin. She slowly lifts her face
-into the stream. Black background. Single overhead light illuminating the water streams
-like liquid silver. Medium shot, slight low angle. Hyper-realistic, sculptural.
-```
-
-### AN-06: Golden Ratio Composition
-
-```
-A nude woman with olive skin reclines on a grey fabric backdrop, positioned precisely within
-a golden spiral composition. Her body curves follow the logarithmic spiral — head at the
-center, torso along the main curve, legs extending along the outer arc. She shifts position
-slowly, flowing from one golden-ratio pose to another. Overhead camera looking directly
-down (bird's eye view). Soft diffused lighting. The composition is mathematical, precise,
-studying the intersection of human form and natural geometry.
-```
-
-### AN-07: Shadow Play
-
-```
-A nude woman stands behind a large venetian blind window. As the blinds slowly rotate, bars
-of light and shadow sweep across her body like a scanner. The light stripes reveal her
-figure in horizontal sections — eyes, collarbone, breasts, navel, thighs — creating a
-living barcode effect. She stands still, only breathing, as the light rotates. Strong
-directional sunlight. Medium full-body shot, straight-on. High contrast black and white
-aesthetic. Graphic, architectural, Helmut Newton inspired.
-```
-
-### AN-08: Life Drawing Session
-
-```
-A nude woman sits on a wooden platform in the center of a life drawing class setup —
-easels and stools visible in the periphery but empty. She holds a classic seated pose:
-one leg extended, one bent, torso twisted three-quarters toward camera, one arm resting
-on her raised knee. She breathes naturally, small movements visible. Warm north-light
-studio lighting from skylights above. Medium shot, eye level. Documentary-style naturalism.
-Muted earth-tone color palette.
-```
-
-### AN-09: Body Calligraphy
-
-```
-A nude woman lies on her side on a white surface. An artist's hand enters the frame holding
-a large calligraphy brush dipped in black sumi ink. The brush traces a single flowing
-Japanese calligraphy stroke along her body — starting at her shoulder, curving around
-her breast, flowing down her waist, over her hip, and along her outer thigh. The ink
-line glistens wet on her skin. She remains perfectly still. Overhead camera. Bright,
-even lighting. Minimalist, Japanese wabi-sabi aesthetic. The body as canvas.
-```
-
-### AN-10: Dust and Light
-
-```
-A nude woman in a dark, dusty abandoned warehouse. She moves slowly through a single
-shaft of sunlight cutting through a high window. Dust motes swirl around her body,
-creating a visible beam she walks through. As she enters the light, her body is
-illuminated in sharp detail — every curve, every line — against the pitch-dark surroundings.
-She extends her arms outward within the beam, dust particles spiraling around her like tiny
-stars. Wide shot establishing the space, then medium shot within the light. Dramatic,
-Vermeer-like quality.
-```
-
-### AN-11: Wet Plate Portrait
-
-```
-Styled as a Victorian wet plate collodion photograph come to life. A nude woman sits
-perfectly still on a wooden chair against a dark mottled backdrop. Slight movements
-betray the living quality — a subtle breath, a micro-adjustment of posture, a blink.
-Desaturated, slightly amber-toned. Shallow depth of field with soft edges characteristic
-of period optics. Natural daylight from one side. Full body seated pose with dignified,
-unflinching composure. Historical photographic aesthetic, tintype quality.
-```
-
-### AN-12: Reflections Doubled
-
-```
-A nude woman stands at the edge of a perfectly still reflecting pool in a white minimalist
-space. Her full body is reflected in the water below, creating a symmetrical double image.
-She slowly bends forward, reaching toward her own reflection. As her fingertips touch the
-water surface, ripples distort her reflected image while she remains sharp above. Bright,
-diffused overhead lighting. Symmetrical composition split between real and reflection.
-Wide shot. Conceptual, meditative, visually striking.
-```
-
-### AN-13: Plaster Cast
-
-```
-A nude woman stands motionless as if she were a plaster sculpture in a museum. Her skin
-has been dusted with white powder to resemble marble. She holds a classical Greek pose.
-Slowly, almost imperceptibly, she begins to breathe — her chest rises, a crack appears
-in the powder on her stomach, fragments fall away revealing warm skin beneath. She slowly
-comes to life, powder cascading off her body with each movement. Museum-quality directional
-lighting. Medium shot. Surreal, Pygmalion mythological atmosphere.
-```
-
-### AN-14: Color Study — Complementary
-
-```
-A nude woman with dark brown skin stands against a deep cobalt blue background. A single
-amber-orange light source illuminates her from below and to the right, creating
-complementary color contrast between the warm light on her skin and the cool background.
-She rotates slowly on a platform like a turntable, allowing the light to sculpt different
-facets of her figure — the roundness of her shoulder, the concavity of her waist, the
-prominence of her hip. Full body shot. Color theory study, fashion-forward, editorial
-quality.
-```
-
-### AN-15: Time-Lapse Poses
-
-```
-A nude woman transitions through 4 classic art poses in a continuous slow movement sequence.
-She begins standing in the Aphrodite of Knidos pose, transitions by stepping forward into
-Degas' Bather pose (arms raised, drying hair), then sinks into a seated Egon Schiele
-angular reclining pose, and finally lies fully supine in a Modigliani odalisque position.
-Each transition flows naturally into the next. Neutral studio background. Constant, even
-lighting. Full body wide shot throughout. Art history survey in living motion.
-```
-
----
-
-## Category 3: Lingerie & Fashion (15 Prompts)
-
-Focused on clothing interaction, fashion presentation, and the aesthetic of revealing garments. Best results with: **Kling v3.0 Pro**, **Seedance v1.5 Pro**, **Wan 2.6**.
-
-### LF-01: Black Lace Reveal
-
-```
-A woman stands in a luxury walk-in closet, wearing a full-length black silk robe. She
-faces a three-panel mirror. She slowly parts the robe, revealing an intricate black lace
-bodysuit underneath — delicate floral patterns with scalloped edges. She turns to view
-herself from different angles, the lace creating complex shadow patterns on her skin.
-She adjusts a strap on her shoulder. Warm vanity lighting. Medium shot in mirror
-reflection. High fashion editorial style, Victoria's Secret aesthetic.
-```
-
-### LF-02: Stocking Application
-
-```
-Close-up to medium shot. A woman sits on the edge of a bed, wearing only matching pearl-white
-bra and underwear. She holds a sheer black thigh-high stocking. She points her toe and
-slowly rolls the stocking up her leg from ankle to mid-thigh, smoothing it against her
-skin with both hands as she goes. The sheer fabric catches the light. She clips it to a
-garter belt. Camera follows the stocking from foot to thigh. Warm bedroom lighting.
-Sensual, deliberate pace. Retro pin-up aesthetic.
-```
-
-### LF-03: Runway Walk — Lingerie Show
-
-```
-A model walks down a dimly lit fashion runway wearing a sheer black bodysuit with strategic
-embroidered panels, paired with thigh-high boots. She walks with confident, exaggerated
-hip sway. Strobe lights flash. At the end of the runway, she pauses, places one hand on
-her hip, turns 180 degrees showing the open-back design, then walks back. Camera follows
-from the front, then cuts to a side profile shot. High-energy fashion show atmosphere.
-Dramatic lighting with warm spotlight following her.
-```
-
-### LF-04: Corset Lacing
-
-```
-Over-the-shoulder shot from behind. A woman in a deep red satin underbust corset has the
-laces pulled tight by unseen hands. The camera focuses on the X-pattern of the laces as
-they are pulled, cinching her waist. She grips a bedpost in front of her, her back arching
-slightly with each pull. The corset's boning creates structured lines along her torso.
-She glances over her shoulder at the camera. Warm candlelit room. Close-up detail on the
-lacing, then pulls back to medium shot. Gothic romantic mood.
-```
-
-### LF-05: Babydoll Drift
-
-```
-A woman in a sheer lavender babydoll nightgown walks through a sunlit corridor with
-floor-to-ceiling windows. The fabric is nearly transparent, floating and drifting with
-each step. She trails one hand along the wall as she walks toward the camera. Bright
-morning sunlight backlights her figure, rendering the fabric completely see-through and
-creating a glowing silhouette. Her movement is dreamy, slow, almost floating. Long
-tracking shot. Ethereal, romantic, fashion editorial quality. Soft pastel color grading.
-```
-
-### LF-06: Leather Harness
-
-```
-A woman with an athletic build stands in an industrial concrete space, wearing a complex
-black leather body harness over bare skin. The harness wraps around her torso in geometric
-patterns — circles around her breasts, X-straps across her back, a waist cincher with
-chrome rings. She rotates slowly, each angle revealing new details of the construction.
-Harsh single-source lighting from camera right creates strong shadows defining the leather
-against her skin. Medium full-body shot. Dark fashion editorial, Alexander McQueen aesthetic.
-```
-
-### LF-07: Pearl Necklace and Nothing Else
-
-```
-A nude woman sits on a velvet upholstered chair, her only adornment being an extremely
-long strand of pearls that wraps multiple times around her neck and drapes down between
-her breasts and across her lap. She slowly lifts the pearl strand with one finger, letting
-it slide against her skin, the pearls catching the light. She winds it around one wrist.
-Dark background, single warm key light. Tight medium shot from chest up. Old money luxury
-aesthetic. Inspired by Man Ray's photography.
-```
-
-### LF-08: Trying On Lingerie — Fitting Room
-
-```
-Inside a boutique fitting room with warm pink-toned lighting. A woman in only nude-toned
-underwear holds up two bras — a red lace balconette and a black push-up. She holds the
-red one against her chest, turns to check the mirror, then swaps to the black. She decides
-on the red, reaching behind to unhook her current bra and pulling it off (shown from the
-side, breast partially visible). She puts on the red lace bra, adjusting the straps and
-cups. Natural, candid feel. Medium shot via mirror reflection.
-```
-
-### LF-09: Wet T-Shirt Contest
-
-```
-A woman in a white crop top stands outdoors at a summer event. Someone off-camera throws
-a bucket of water at her. The water hits in slow motion — splashing upward, soaking the
-fabric instantly. The white cotton becomes completely transparent, adhering to her breasts,
-every contour visible. She laughs, shaking water out of her hair, then wrings the bottom
-of the shirt. Bright summer sunlight, high contrast. Medium shot. Fun, playful, uninhibited
-energy. Pop color grading with vibrant blues and greens.
-```
-
-### LF-10: Bodysuit Peel
-
-```
-A woman in a skin-tight metallic silver bodysuit stands in a futuristic white studio space.
-She finds the concealed zipper at her neck and slowly pulls it downward — from her throat,
-between her breasts, past her navel, to below her waist. The metallic fabric peels apart
-on either side, revealing bare skin in a widening V-shape. She pauses at the navel. Camera
-follows the zipper path in a slow vertical tilt. Bright, clinical lighting. Tight shot on
-the zipper line. Sci-fi fashion editorial.
-```
-
-### LF-11: Sheer Kimono
-
-```
-A Japanese-inspired room with tatami floors and shoji screens. A woman wears a sheer silk
-kimono in pale cherry blossom pink, loosely tied with a thin obi. The fabric is translucent
-enough to show her silhouette beneath. She kneels in seiza position, then slowly rises,
-the kimono parting at the legs as she stands. She walks toward the camera with small,
-graceful steps. Soft, diffused natural light through paper screens. Full body shot. Wabi-sabi
-aesthetic, elegant restraint.
-```
-
-### LF-12: Swimsuit Calendar Shoot
-
-```
-A woman poses for a calendar-style swimsuit shoot on a tropical beach. She wears a minimal
-string bikini in neon coral. A fan blows her hair. She moves through three poses: standing
-with hands on hips (facing camera), turning to show the thong-back view, then bending
-forward with hands on knees (camera from side angle). Between each pose she adjusts the
-bikini straps and bottom. Bright tropical sunlight, turquoise ocean background. Medium
-full-body shot. Commercial fitness photography style.
-```
-
-### LF-13: Bustier Burlesque
-
-```
-A woman in a vintage-style red sequined bustier, matching underwear, and elbow-length
-black gloves performs a burlesque tease. She slowly peels off one glove finger by finger,
-pulling each fingertip with her teeth. She tosses the glove off-screen. She then places
-her hands on her bustier-clad chest and slowly runs them downward to her hips. She winks
-at the camera. Warm spotlight on a dark stage. Medium shot. Theatrical, playful, vintage
-burlesque aesthetic. Slight film grain.
-```
-
-### LF-14: Bridal Lingerie
-
-```
-A bride-to-be wearing a white lace bridal lingerie set — strapless bustier, garter belt,
-white silk stockings, and a short sheer veil — walks toward a hotel room bed scattered
-with rose petals. She turns, showing the low-back design, then sits on the bed edge,
-crossing one leg over the other. She reaches up and slowly removes the veil, placing it
-beside her. She looks at the camera with anticipation. Warm romantic lighting with candles
-on the nightstands. Medium shot. Bridal boudoir photography style.
-```
-
-### LF-15: Mesh and Chains
-
-```
-A woman with a shaved head and bold eye makeup wears a full-body fishnet mesh catsuit with
-no undergarments. Thin silver chains drape from a collar around her neck, hanging between
-her breasts and connecting to a waist chain. She walks slowly in a circle within a tight
-spotlight beam, the mesh pattern creating a grid of shadows on her skin. She pauses, runs
-a finger along one of the chains. Black background, single top-down spotlight. Full body
-shot. High fashion, avant-garde, editorial darkness.
-```
-
----
-
-## Category 4: Fantasy & Mythology (15 Prompts)
-
-Imaginative scenes blending nudity with fantastical or mythological elements. Best results with: **Wan 2.6 T2V**, **Seedance v1.5 Pro**, **Vidu Q3-Pro**.
-
-### FM-01: Forest Nymph
-
-```
-A nude woman with ivy and small flowers woven into her long green-tinted hair emerges from
-behind an ancient mossy oak tree in a dense enchanted forest. Her skin has a faint luminous
-green undertone. Fireflies circle around her. She reaches out one hand, and a butterfly
-lands on her fingertip. She moves between the trees with inhuman grace, bare feet silent
-on the moss. Dappled sunlight filtering through the canopy. Wide shot pulling into medium
-shot as she approaches. Fantasy color grading — saturated greens and warm golden light.
-```
-
-### FM-02: Siren's Song
-
-```
-A nude woman with pale blue-white skin and long silver hair sits on a dark ocean rock
-at twilight. Her lower body transitions into iridescent fish scales at the hips (mermaid).
-Waves crash around her. She tilts her head back and opens her mouth as if singing — visible
-ripples emanate from her in the water. Bioluminescent plankton glow in the waves around
-her. Her eyes have an otherworldly blue glow. Wide cinematic shot. Dark fantasy color
-palette — deep navy, silver, teal. Epic orchestral atmosphere.
-```
-
-### FM-03: Fallen Angel
-
-```
-A nude woman with massive dark feathered wings lies in a crater of scorched earth, as if
-she has just fallen from the sky. Her wings are spread wide, some feathers broken and
-smoldering. Her skin is pale, marked with glowing golden veins like cracks in porcelain.
-She slowly pushes herself up onto her hands and knees, wings folding behind her. Smoke
-and ember particles float around her. Dark dramatic lighting from the glow of the embers.
-Wide overhead shot transitioning to eye-level medium shot as she rises. Dark fantasy,
-biblical aesthetic.
-```
-
-### FM-04: Elven Queen's Chamber
-
-```
-A tall, slender nude woman with pointed ears and impossibly long platinum hair sits on a
-throne carved from a single enormous crystal in an underground cavern. Bioluminescent
-mushrooms and crystals light the space in soft blue and purple hues. She slowly stands,
-her hair cascading down past her waist. She walks forward, each step causing the crystals
-on the ground to pulse with light. Her skin reflects the crystalline colors. Full body
-shot, slow tracking shot. High fantasy, Lord of the Rings aesthetic. Otherworldly beauty.
-```
-
-### FM-05: Fire Goddess
-
-```
-A nude woman levitates above a volcanic lake, arms spread wide. Her entire body is enveloped
-in flames that do not burn her — fire licks along her arms, wraps around her torso, and
-streams from her hair like a flaming crown. Her eyes glow molten orange. Below her, the
-lava surface churns. She slowly rotates in the air, fire intensifying with the movement.
-The flames follow her body contours, simultaneously revealing and concealing her form.
-Wide dramatic shot. Fire and smoke particle effects. Epic dark fantasy.
-```
-
-### FM-06: Ice Witch
-
-```
-A nude woman with stark white skin and frost-blue lips stands in the center of a frozen
-lake during a blizzard. Her body generates a visible cold aura — the air crystallizes
-around her. As she raises her arms, ice formations grow from the ground around her like
-organic sculptures. Frost patterns spread across her skin like natural tattoos. Her breath
-is visible in the cold. She is unaffected by the extreme cold, standing serene and
-powerful. Blue-white color palette. Wide shot with snow particles. Dark fantasy, Norse
-mythology inspired.
-```
-
-### FM-07: Moon Bathing
-
-```
-A nude woman lies on a flat stone altar in a forest clearing under a massive full moon.
-Moonlight bathes her body in silver-blue light. She slowly lifts her arms toward the
-moon. Where the moonlight touches her skin, subtle luminescence appears — she begins to
-glow softly from within. Small motes of light rise from her skin like reverse rain,
-floating upward toward the moon. Forest silhouettes frame the scene. Wide shot emphasizing
-the moon's scale. Pagan, mystical atmosphere. Ethereal and sacred.
-```
-
-### FM-08: Dragon Queen
-
-```
-A nude woman with amber-gold skin and vertical-slit reptilian eyes sits atop the back of
-an enormous sleeping dragon. Smoke curls from the dragon's nostrils. Her body is partially
-wrapped in the dragon's leathery wing like a blanket. She strokes the dragon's scales
-with one hand. Her own skin has faint scale-like patterns on her shoulders and thighs.
-Warm firelight from braziers in a stone cavern. Medium shot. Dark fantasy, Game of Thrones
-aesthetic. Power, dominance, and intimacy with the mythical beast.
-```
-
-### FM-09: Medusa Unmasked
-
-```
-A nude woman with a mass of living serpents for hair stands in a Greek temple ruin. The
-snakes move independently, some coiling around her shoulders and arms. She looks directly
-into the camera with intense green eyes — but instead of turning the viewer to stone,
-her gaze is mesmerizing, seductive. She slowly smiles. Moonlight streams through broken
-columns. Marble dust floats in the air. Her body is flawless, statuesque. Medium shot,
-slight low angle. Greek mythology meets dark seduction. Monochromatic cool palette with
-green accent in her eyes.
-```
-
-### FM-10: Enchanted Mirror
-
-```
-A nude woman reaches toward a large ornate mirror floating in a dark void. As her fingertips
-touch the mirror surface, it ripples like water. Her reflection in the mirror is different —
-it shows her clothed in an elaborate fantasy gown with a crown. The reflection moves
-independently, reaching back toward her. Their fingertips meet at the glass surface.
-Light emanates from the point of contact. Surreal dark fantasy. Medium shot showing both
-the real woman and her magical reflection. Mysterious, dream-like atmosphere.
-```
-
-### FM-11: Vampire Seduction
-
-```
-A pale-skinned nude woman with crimson lips and dark eyes reclines on a Gothic four-poster
-bed draped in black and deep red velvet. Lit only by a candelabra, deep shadows define
-her angular features. She slowly extends one hand toward the camera, beckoning. Her canine
-teeth are subtly elongated. A trickle of red (wine? blood?) runs from the corner of her
-mouth down her chin and neck. She licks her lips slowly. Tight medium shot. Gothic horror
-romance. Rich burgundy and black color palette.
-```
-
-### FM-12: Goddess of the Dawn
-
-```
-A nude woman floats horizontally in the sky among pink and orange sunrise clouds. Her body
-is surrounded by a radiant golden aura. Rose petals and light particles swirl around her.
-She slowly extends her arms and legs outward in a star pose, and wherever her limbs point,
-beams of warm light burst outward, painting the clouds in vivid sunrise colors. Her hair
-flows as if in water, spread in all directions. Wide epic shot. Renaissance ceiling fresco
-come to life. Triumphant, divine, awe-inspiring.
-```
-
-### FM-13: Dryad Awakening
-
-```
-The bark of a large tree begins to shift and crack. A nude female form slowly emerges from
-within the trunk — first a face pressing outward from the bark, then shoulders, then her
-full torso pulls free while her legs remain merged with the tree. Her skin transitions from
-rough bark texture at her hips to smooth human skin at her chest and face. Small green
-shoots and leaves sprout from her hair. She opens her eyes — they are solid emerald green.
-Forest setting, morning mist. Medium shot. Transformation sequence. Nature fantasy.
-```
-
-### FM-14: Celestial Being
-
-```
-Deep space background with nebulae and distant galaxies. A nude woman of enormous scale
-floats in the void, her body translucent like a cosmic jellyfish. Stars and galaxies are
-visible through her form. She slowly moves her arms, and her gesture creates new swirls
-of cosmic gas and infant stars. Her hair spreads outward like the arms of a spiral galaxy.
-Her eyes contain entire solar systems. She is creation itself in feminine form. Epic wide
-shot. Sci-fi meets mythology. Awe-inspiring scale and beauty.
-```
-
-### FM-15: Witch's Ritual
-
-```
-A nude woman kneels in the center of a glowing pentagram drawn on a stone floor in an
-ancient candlelit chamber. She holds a crystal orb above her head. The orb pulses with
-inner light that synchronizes with symbols carved into the floor, which begin to glow
-in sequence. Shadows dance on the walls. Her eyes roll back to white as energy visibly
-flows from the orb through her body and into the floor markings. Wind blows from nowhere,
-lifting her hair and dust from the ground. Medium shot. Dark occult aesthetic. Power and
-mysticism.
-```
-
----
-
-## Category 5: Anime & Hentai (15 Prompts)
-
-Stylized prompts for anime and manga-inspired NSFW content. Best results with: **Wan 2.2 Spicy LoRA** (with anime LoRA), **Wan 2.5 T2V**, **Vidu Q3-Pro**.
-
-### AH-01: Hot Spring Episode
-
-```
-Anime style. A girl with long pink hair and large blue eyes sits in a traditional Japanese
-onsen (hot spring). Steam rises around her. She is submerged to her collarbone, her bare
-shoulders visible. She stands up slowly in the water, revealing her back and the side of
-her chest. Water streams down her anime-style body. She wraps a small white towel around
-herself that barely covers her chest and upper thighs. Cherry blossom petals float on the
-water surface. Soft pastel color palette. Typical anime hot spring episode aesthetic.
-```
-
-### AH-02: Beach Episode Fanservice
-
-```
-Anime style. A girl with short blue hair in a tiny white micro bikini runs along a sunny
-anime beach. Classic anime running pose — arms pumping, breasts bouncing with exaggerated
-physics. She trips and falls forward into the shallow surf. The bikini top's tie comes
-undone. She sits up in the water, clutching the loose top to her chest with one arm, face
-bright red with embarrassment. Sparkly water effects. Bright saturated colors. Classic
-ecchi anime beach episode fanservice scene. Dynamic motion.
-```
-
-### AH-03: Transformation Sequence
-
-```
-Anime magical girl transformation sequence. A girl with twin-tail purple hair is surrounded
-by ribbons of glowing light. Her school uniform dissolves into particles from top to bottom,
-briefly showing her nude silhouette bathed in magical light. Glowing ribbons wrap around her
-body, forming a new magical girl outfit. During the 2-second nude phase, the body is detailed
-but covered by strategic light flares and ribbon trails. Hair grows longer and changes to
-silver. Eyes glow. Sparkle effects everywhere. Dynamic rotating camera. Sailor Moon meets
-modern ecchi aesthetic.
-```
-
-### AH-04: Bedroom Window
-
-```
-Anime style. A girl with long black hair in a sheer white nightgown sits on a windowsill
-in her bedroom at night, one leg dangling. Moonlight renders the nightgown translucent,
-clearly showing her body underneath. She gazes at the moon pensively. The breeze lifts the
-hem of the nightgown. She hugs her knees to her chest, the fabric stretching taut. Her room
-is visible behind her — a desk with homework, a bed with stuffed animals. Romantic, slightly
-melancholic mood. Soft blue moonlight. Medium shot. Seinen anime aesthetic.
-```
-
-### AH-05: Locker Room Scene
-
-```
-Anime style. A girl with a ponytail stands in a school locker room after swimming class.
-She is pulling off her one-piece school swimsuit, peeling it down from her shoulders. The
-suit is bunched at her waist, her bare upper body visible from the side angle. Water droplets
-on her anime-style skin. Steam from nearby showers in the background. Blurred background
-figures of other students (not detailed). She reaches for a towel on a hook. Bright
-fluorescent lighting. Classic ecchi anime perspective with careful framing.
-```
-
-### AH-06: Catgirl Maid
-
-```
-Anime style. A catgirl with white hair, cat ears, and a fluffy tail wears a very short
-French maid outfit with a deeply plunging neckline. She bends forward at the waist to
-pick up a fallen duster, the camera positioned low, capturing the skirt riding up to
-reveal white lace underwear. Her tail swishes playfully. She looks over her shoulder
-with a mischievous expression, one fang visible. She straightens up and adjusts her
-headband. Ornate anime mansion background. Bright, colorful. Moe anthropomorphism aesthetic.
-```
-
-### AH-07: Onsen Towel Drop
-
-```
-Anime style. A busty girl with red hair wrapped in a small white towel walks into an
-outdoor hot spring area at a ryokan. As she steps down into the water, the towel loosens
-and begins to unwrap. She gasps, grabbing at it, but it slips away, floating on the water
-surface. She quickly submerges to her neck, arms crossed over her chest, face completely
-red. Steam conveniently partially obscures the scene. Close-up on her embarrassed face,
-then wide shot of the scenic mountain onsen. Comedy ecchi moment.
-```
-
-### AH-08: Succubus Seduction
-
-```
-Dark anime style. A succubus with short black horns, bat-like wings, and a spaded tail
-floats above a sleeping man's bed. She wears only a strappy leather micro-outfit that
-covers almost nothing. Her skin is a faint lavender hue, eyes glowing amber. She descends
-slowly, sitting on the edge of the bed. She leans forward, her tail curling playfully. Her
-wings fold behind her. Dark purple and crimson color palette with magical particle effects.
-Detailed shadows on her voluptuous anime figure. Seinen dark fantasy aesthetic.
-```
-
-### AH-09: Tentacle Fantasy
-
-```
-Dark anime style. A warrior priestess with long white hair, wearing torn ceremonial robes,
-is suspended in mid-air by glowing magical tendrils emerging from a portal. The tendrils
-wrap around her wrists, ankles, and torso, slowly pulling her robes apart. Her expression
-is a mix of defiance and pleasure. Energy crackles where the tendrils contact her skin.
-Her staff lies broken on the temple floor below. Dark atmosphere with the portal providing
-eerie purple backlighting. Dynamic composition. Classic dark fantasy hentai aesthetic.
-```
-
-### AH-10: School Rooftop Confession
-
-```
-Anime style. Golden hour on a school rooftop. A girl in a school uniform (short skirt,
-sailor collar) faces a boy, confessing her feelings. Overcome with emotion, she impulsively
-grabs his collar and kisses him deeply. Wind catches her skirt, flipping it up briefly
-to show white cotton panties. Cherry blossom petals blow across the scene. Their hair
-blows in the wind. Pull back to a wide shot showing the beautiful sunset cityscape behind
-them. Romantic, emotional. Warm golden light. Shoujo meets ecchi crossover moment.
-```
-
-### AH-11: Elf Archer Bathing
-
-```
-Fantasy anime style. An elf girl with very long pointed ears and golden hair washes herself
-in a crystal-clear forest stream. She is nude, standing waist-deep in the water, cupping
-water in her hands and pouring it over her shoulders. Her bow and quiver rest on the bank.
-Sunlight filters through the magical forest canopy, creating light shafts in the mist.
-Small fantasy fish swim around her legs. Her ears twitch at a sound — she turns sharply,
-covering herself with her hands. Lush green fantasy environment. Beautiful cel-shading.
-```
-
-### AH-12: Gym Shower Scene
-
-```
-Anime style. A fit girl with short tomboy-cut brown hair stands under a shower in a gym
-changing room. Water runs over her athletic anime body — defined abs, lean muscles. She
-tilts her head back into the water stream, eyes closed. She squeezes shampoo into her
-hand and lathers her hair, arms raised, showing her toned figure. Water streams run down
-her body. Bright clean lighting. She is relaxed, casual — not posing. Sports anime
-aesthetic with ecchi elements. Side medium shot. Steam and water effects.
-```
-
-### AH-13: Nurse Outfit
-
-```
-Anime style. A busty girl in an extremely tight, low-cut white nurse outfit leans forward
-across a desk, checking a clipboard. The outfit's buttons strain visibly against her chest.
-A stethoscope hangs around her neck, nestled in her cleavage. She reaches across the desk
-for a pen, the outfit riding up in the back. She adjusts her tiny nurse cap. She straightens
-up and gives a reassuring smile. Bright, clean hospital anime setting. Comedy fanservice
-aesthetic. Medium shot with slight low angle.
-```
-
-### AH-14: Demon Queen Throne
-
-```
-Dark anime style. A voluptuous demon queen with curved ram horns, long crimson hair, and
-pale grey skin sits on a bone throne in a hellish castle. She wears only an elaborate
-jeweled collar and a sheer black loincloth. She crosses one leg over the other slowly,
-her clawed fingers drumming on the armrest. A crown of dark flames floats above her head.
-Her eyes glow with internal fire. She smirks with visible fangs. The room is lit by pools
-of lava. Epic dark fantasy anime. Full body medium shot. Commanding, dangerous beauty.
-```
-
-### AH-15: Cyberpunk Body Mod
-
-```
-Sci-fi anime style. A woman with a cybernetic arm and glowing circuit-pattern tattoos across
-her bare torso sits in a neon-lit cyberpunk bar. She wears only a leather jacket (open,
-nothing underneath) and micro shorts. Holographic advertisements flicker behind her. She
-takes a drag from a futuristic cigarette, blue smoke curling upward. Neon reflections play
-across her exposed chrome-and-skin body. Rain streaks the window behind her. Pink and blue
-neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir angle.
-```
-
----
-
-## Category 6: Explicit Action (15 Prompts)
-
-Explicit sexual content prompts. These require models with full NSFW capability. Best results with: **Wan 2.2 Spicy** (only model with near-100% compliance for explicit content).
-
-> **Model Note:** Only Wan 2.2 Spicy reliably generates explicit action content. Wan 2.5 has ~50% success rate for these prompts. Wan 2.6, Seedance, Vidu, and Kling will refuse most of these even with NSFW whitelist.
-
-### EA-01: Solo — Bedroom Self-Touch
-
-```
-A woman lies on her back on white sheets, nude. She slowly runs both hands from her
-collarbone down over her breasts, stomach, and to her inner thighs. Her back arches
-slightly as her hands reach lower. Her eyes are half-closed, lips parted. One hand stays
-on her breast while the other continues between her thighs. Shallow breathing visible.
-Warm side lighting from a bedside lamp. Medium shot from above and to the side. Intimate,
-private moment. Slow, natural movements. Soft focus on background.
-```
-
-### EA-02: Solo — Shower Pleasure
-
-```
-A woman stands in a glass-enclosed shower, water streaming over her body. She leans her
-back against the tile wall, one hand pressed flat against the glass. Her other hand moves
-down her stomach and between her legs. Her head tilts back, mouth open. Water runs over
-her face and chest. Her legs part slightly, knees bending. Steam fills the enclosure. She
-bites her lower lip. Warm water and warm lighting. Shot through the steamy glass for a
-slightly soft-focus effect. Medium shot.
-```
-
-### EA-03: Solo — Morning Stretch
-
-```
-A woman wakes up nude in bed, stretching her arms overhead. She yawns, then lazily slides
-her hand under the sheets, between her legs. The sheet tents slightly with her movement
-underneath. Her expression shifts from sleepy to pleasured. She rolls onto her stomach,
-hips pressing into the mattress with a subtle grinding motion. She buries her face in the
-pillow. Morning light through curtains. Medium shot from the side. Gentle, unhurried,
-natural.
-```
-
-### EA-04: Couple — Missionary
-
-```
-A couple on a bed. The woman lies on her back, legs wrapped around the man's waist. He
-supports himself on his forearms above her. Their bodies move together in a slow, rhythmic
-motion. She grips his shoulders, pulling him closer. He buries his face in her neck. Her
-back arches off the mattress. The sheet is tangled at their feet. Warm ambient lighting
-from multiple candles. Side medium shot showing both bodies. Passionate, connected, loving.
-Slow pace.
-```
-
-### EA-05: Couple — From Behind
-
-```
-A woman is on her hands and knees on a bed, gripping the headboard with both hands. A man
-kneels behind her, hands on her hips. Their bodies connect and move in a steady rhythm. Her
-head drops forward, hair falling around her face. She looks back over her shoulder at him.
-His hands slide up her back. Warm bedroom lighting, slightly dim. Medium-wide shot from the
-side, showing the full positioning. Intense but intimate. Moderate pace building slowly.
-```
-
-### EA-06: Couple — Riding
-
-```
-A woman straddles a man who lies on his back on the bed. She sits upright, palms flat on
-his chest. She moves her hips in a rolling, circular motion. Her head tilts back, eyes
-closed, mouth open. Her breasts move with her rhythm. He grips her thighs. She leans
-forward, placing her hands on either side of his head, changing the angle. Hair cascades
-around both their faces. Warm dim lighting. Medium shot from slightly above and to the side.
-She is in control. Sensual, powerful.
-```
-
-### EA-07: Oral — Woman Receiving
-
-```
-A woman reclines on a couch, legs spread, wearing only an unbuttoned blouse that has fallen
-to her sides. A man kneels on the floor between her legs, his face between her thighs (shown
-from behind/side — his back and her reaction). Her hands grip the couch cushion. Her head
-falls back, lips parted in a gasp. One hand moves to the back of his head. Her hips tilt
-upward slightly. Warm low lighting. Medium shot focused primarily on her upper body and
-facial expression. Pleasured, surrendering.
-```
-
-### EA-08: Oral — Man Receiving
-
-```
-A man sits on the edge of a bed. A woman kneels between his legs, her back to camera. Her
-head moves in a rhythmic forward-and-back motion. His hand rests gently on her hair. His
-head is tilted back, eyes closed, jaw clenched. He exhales visibly. She pauses, looking up
-at him (shown from the side). She uses one hand on him. Medium shot from the side and
-slightly behind her, emphasizing his reaction. Dim bedroom lighting. Intimate, pleasurable.
-```
-
-### EA-09: Couple — Against the Wall
-
-```
-A man lifts a woman against a wall, her legs wrapped around his waist. Her back is against
-the wall, arms around his neck. They move together, the wall providing support. She grips
-his hair. His hands support her thighs. The movement is intense, rhythmic. A framed picture
-on the wall behind them tilts. She bites his shoulder. Dim hallway lighting, natural and
-unplanned atmosphere. Medium shot from the side. Urgent, passionate, spontaneous.
-```
-
-### EA-10: Couple — Spooning
-
-```
-A couple lies on their sides in bed in a spooning position, both nude. The man is behind
-the woman, his arm draped over her waist. They move together in a gentle, slow rhythm. She
-reaches one arm back to hold the back of his neck. Their legs intertwine. He kisses her
-shoulder and neck. Close-up on their intertwined hands on her stomach. Soft morning light.
-Tight medium shot. Gentle, loving, sleepy intimacy. Slow, lazy pace.
-```
-
-### EA-11: Solo — Toy
-
-```
-A woman lies propped up on pillows in bed, knees bent, legs apart. She holds a smooth
-silicone toy, slowly introducing it between her legs. Her other hand grips the pillow
-beside her head. Her hips rock gently to meet the motion. She breathes heavily, chest
-rising and falling. Her expression cycles through concentration, pleasure, and release.
-Warm side lighting. Medium shot from an angled overhead position. Private, personal.
-Natural, unhurried pace.
-```
-
-### EA-12: Couple — Bathtub
-
-```
-A couple in a large freestanding bathtub filled with warm water. She sits in his lap, facing
-him, legs around his waist. Their upper bodies are above the water line. They move together
-slowly, water gently sloshing over the edges. She holds his face with both hands, kissing
-him deeply. Candlelight surrounds the tub. Steam rises. Water droplets on both their bodies
-catch the warm light. Wide shot of the entire tub scene. Romantic, passionate, luxurious
-setting.
-```
-
-### EA-13: Solo — Mirror Masturbation
-
-```
-A woman sits on the floor facing a full-length mirror, nude. She watches herself in the
-mirror as her hand moves between her parted legs. She makes eye contact with her own
-reflection. Her other hand cups her breast. She leans back on one arm, giving herself
-better access. The mirror shows both the front and rear perspective simultaneously. Warm
-ambient lighting. Shot from behind the woman, capturing her and her reflection. Self-
-exploratory, intimate, voyeuristic framing.
-```
-
-### EA-14: Couple — Desk
-
-```
-An office setting. A woman sits on the edge of a large wooden desk, her skirt hiked up
-to her waist. A man stands between her legs, his suit pants lowered. They move together,
-her legs wrapped around him. She leans back, supporting herself on her elbows, knocking
-papers off the desk. He loosens his tie with one hand. Desk lamp provides warm directional
-light. The rest of the office is dark. Medium shot from the side. Illicit, urgent, passionate.
-Fast pace.
-```
-
-### EA-15: Couple — Outdoor
-
-```
-A secluded forest clearing at dusk. A couple on a blanket on the ground, both nude. She
-straddles him, hands on his chest, moving her hips. The last rays of sunset filter through
-the trees, casting long golden shadows across their bodies. Wildflowers surround the
-blanket. Birds audible. Their pace is slow, savoring. She leans down to kiss him. His
-hands caress her back. Wide shot establishing the natural setting, then medium shot of
-their bodies. Natural, primal, romantic. Connected to the earth.
-```
-
----
-
-## Category 7: Cinematic & Narrative (10 Prompts)
-
-Story-driven NSFW prompts with narrative context. Best results with: **Seedance v1.5 Pro** (best motion), **Kling v3.0 Pro** (best faces), **Wan 2.6** (best value for quality).
-
-### CN-01: Film Noir Femme Fatale
-
-```
-Black and white. A woman in a 1940s detective office, wearing a low-cut satin dress,
-crosses and uncrosses her legs while sitting across from an unseen detective. Cigarette
-smoke curls upward. Venetian blind shadows stripe across her body. She slowly reaches into
-her cleavage and pulls out a folded photograph, sliding it across the desk. She leans
-forward, offering a view down her neckline. Hard shadows, high contrast black and white
-cinematography. Medium shot, classic noir framing. Suspicious, seductive, dangerous.
-```
-
-### CN-02: Hotel Room Reveal
-
-```
-A woman enters a dark hotel room, the hallway light silhouetting her figure in the doorway.
-She lets the door swing shut. In the growing darkness, we hear (not see) the sound of a
-zipper. A bedside lamp clicks on, revealing her standing in just her underwear, her dress
-pooled at her feet. She walks toward the bed where her partner waits. The camera stays at
-the doorway, watching from a distance. Long shot transitioning to medium as she approaches
-the bed. Voyeuristic, cinematic, tension-building.
-```
-
-### CN-03: Artist and Model
-
-```
-A male artist in a paint-splattered smock stands before an easel in a Parisian loft. His
-nude female model sits on a stool in a twisted pose. He studies her intently, then paints.
-She shifts position without being asked — uncrossing her legs, arching her back differently,
-giving him a more provocative angle. Their eyes meet. She smiles subtly. The creative
-tension between them is palpable. Paint-stained afternoon light. Camera alternates between
-his concentrated face and her posing body. Artistic process, unspoken attraction.
-```
-
-### CN-04: Spy Seduction
-
-```
-A luxury hotel suite. A woman in a stunning backless evening gown enters with a target
-mark — a man in a tuxedo. As he pours champagne, she secretly places a device under the
-table. She approaches him, takes the glass, and slowly unzips her gown from the back while
-maintaining eye contact. The gown falls, revealing a bodysuit that might be lingerie or
-might be tactical gear. She pushes him backward onto the bed. Camera captures the seduction
-from a surveillance-camera angle. Cold lighting, cool color grade. Dangerous, calculated.
-```
-
-### CN-05: Music Video — Slow Burn
-
-```
-A female singer in a music video set. She begins fully clothed in a dramatic red dress on
-a dark stage with a single spotlight. As the "beat drops" (imagine the music), she rips
-away the dress to reveal a crystal-covered nude bodysuit beneath. She dances aggressively —
-drops, body rolls, floor work. Sweat flies from her body under the strobes. Backup dancers
-mirror her moves behind her. Quick cuts between wide performance shots and tight body
-detail shots. High production value. Beyonce/FKA twigs energy. Dynamic camera on crane.
-```
-
-### CN-06: Period Drama — Lady's Chamber
-
-```
-18th century bedchamber. A noblewoman in full period dress (corset, petticoats, panniers)
-is being undressed by her lady's maid for bed. Layer after layer is removed — overskirt,
-pannier frame, petticoat, stays — each removal revealing more of her body. The maid's hands
-work the laces of the corset with practiced efficiency. The noblewoman stands patiently,
-arms raised. Finally in just a thin chemise, she dismisses the maid with a gesture and
-pulls the chemise over her head alone. Candlelight. Documentary historical detail meets
-sensuality. Medium shot.
-```
-
-### CN-07: Underwater Discovery
-
-```
-A female diver in just a bikini bottom (no top) swims through a submerged ancient temple.
-Shafts of sunlight penetrate the clear water. Her body moves with fluid, weightless grace.
-Her hair flows like seaweed around her. She discovers a glowing artifact on a pedestal.
-As she reaches for it, the glow intensifies, and her skin begins to shimmer with golden
-light. Air bubbles rise from her lips. Camera follows her swimming body in one long
-continuous underwater tracking shot. Aquamarine color palette. Adventure meets beauty.
-```
-
-### CN-08: Photo Shoot Behind the Scenes
-
-```
-A behind-the-scenes look at a nude photo shoot. A professional photographer directs a nude
-model through poses. We see the model from the photographer's perspective and from the side
-(showing both). The model transitions between poses — standing, seated, reclined — following
-the photographer's hand gestures. A makeup artist touches up body makeup between poses.
-An assistant adjusts a reflector. The model is nude but completely professional and
-comfortable. Bright studio lighting. Documentary-style camera work. Real-world creative
-process.
-```
-
-### CN-09: Dressing Room Quick Change
-
-```
-Backstage at a fashion show. A model rushes to a changing station, pulls her current outfit
-(a sheer top) over her head — briefly nude — and a dresser immediately begins pulling a new
-outfit onto her. The model steps into a skirt while a seamstress pins the back. Another
-model changes behind her simultaneously. The frantic energy contrasts with the casual nudity.
-Fluorescent backstage lighting, raw and unflattering. Handheld camera. Fast-paced, chaotic.
-Not sexy — this is the machine behind the glamour. Documentary realism.
-```
-
-### CN-10: Post-Apocalyptic Survivor
-
-```
-A woman in a ruined cityscape (collapsed buildings, overgrown vegetation) washes herself
-in a broken fire hydrant stream. She wears only torn cargo pants, stripped to the waist.
-Water runs over her scarred, muscular torso. A makeshift weapon (baseball bat with nails)
-leans against the wall within arm's reach. She is alert even while washing — scanning the
-surroundings. She pulls on a tank top, picks up the weapon, and moves on. Overcast, muted
-color grading. Wide environmental shot. Survival, toughness, vulnerability. Not sexualized
-— the nudity is circumstantial.
-```
-
----
-
-## Category 8: Fetish & Niche (10 Prompts)
-
-Specialized content for specific aesthetic preferences. Best results with: **Wan 2.2 Spicy** (highest compliance), **Wan 2.5** (moderate compliance with better quality).
-
-### FN-01: Rope Bondage — Shibari Art
-
-```
-A nude woman with pale skin and dark hair stands in a minimalist white studio. Intricate
-red jute rope shibari patterns wrap around her torso — a classic chest harness (takate
-kote) with diamond patterns across her breasts and back. The rope continues in a hip
-harness pattern. She is not restrained — she turns slowly to display the rope work as
-wearable art. Each knot and wrap is precise, symmetrical. Even studio lighting. Full body
-shot rotating 360 degrees. The emphasis is on the craftsmanship of the rope work against
-the human form. Japanese bondage art aesthetic.
-```
-
-### FN-02: Body Painting Session
-
-```
-A nude woman stands while an artist paints directly on her body with vibrant acrylics. The
-artist's brush traces along her collarbone, down the center of her chest, around her navel.
-A cosmic galaxy design takes shape — stars and nebulae flowing across her torso and down her
-thighs. Time-lapse segments show the painting progressing. She rotates slowly as the design
-covers her back. By the end, her entire body is a canvas of swirling colors and celestial
-imagery. The body paint simultaneously conceals and accentuates her form. Bright studio
-lighting. Documentary pace.
-```
-
-### FN-03: Leather and Domination
-
-```
-A tall woman in thigh-high black leather boots, a leather waist cincher, and nothing else
-stands in a dimly lit room with concrete walls. She holds a riding crop, tapping it against
-her palm rhythmically. She paces slowly, heel clicks echoing. She stops, turns to face the
-camera with an imperious expression, and points the crop directly at the lens. Her posture
-is rigid, commanding. Harsh single-source light from above. Medium shot, slight low angle
-emphasizing her height and authority. BDSM dominatrix aesthetic. Power, control, intimidation.
-```
-
-### FN-04: Latex Suit
-
-```
-A woman with a bob haircut pulls on a full-body black latex catsuit in a sleek modern
-apartment. Starting from the legs, she works the skin-tight material up over her hips,
-waist, and torso. The latex squeaks and shines as it stretches over her curves. She zips
-the front zipper from navel to neck. The suit reflects every light source in the room like
-liquid mercury. She flexes and poses, admiring the second-skin effect. Multiple light
-sources create highlight streaks across the latex. Medium shot. Fetish fashion editorial.
-```
-
-### FN-05: Foot Focus
-
-```
-A woman sits in a plush chair, legs crossed, wearing a short silk robe. She slowly extends
-one bare foot toward the camera. Close-up on the foot — arched instep, painted toenails
-(deep red), the curve of the ankle. She flexes her foot, pointing and flexing her toes.
-She runs her own fingers along the sole, then between her toes. She dangles a high-heeled
-shoe from the foot before letting it drop. Warm, intimate lighting. Extreme close-up to
-medium shot range. The foot is presented as an object of aesthetic beauty.
-```
-
-### FN-06: Oiled Body
-
-```
-A fitness-model-physique woman stands in a spotlight on a dark stage. Another person's
-hands pour golden oil onto her shoulders. She spreads the oil over her arms, chest, abs,
-and thighs with both hands. Every muscle definition is accentuated by the shining oil.
-She flexes different muscle groups — biceps, quads, glutes — the oil catching the light
-differently with each contraction. She does a slow bodybuilding-style turn. Dramatic stage
-lighting with multiple colored spots. Full body shot. Fitness competition meets sensual
-performance.
-```
-
-### FN-07: Wax Play
-
-```
-A woman lies face-up on a dark surface, nude. A hand tips a lit candle above her, dripping
-hot wax onto her stomach. The red wax splatters and solidifies on her skin in random
-patterns. She gasps slightly at each drop, her abs contracting. The wax trail moves upward
-toward her chest. Close-up on the wax hitting skin — the liquid splash, the instant
-solidification. The contrast of red wax on pale skin creates an art piece. She breathes
-heavily, anticipating each drop. Warm candlelight only. Close-up to medium shot. Sensory,
-intimate, trust-based.
-```
-
-### FN-08: Cosplay Boudoir — Schoolgirl
-
-```
-A woman dressed in a Japanese schoolgirl cosplay outfit — pleated plaid skirt, white blouse
-tied above the navel, knee-high socks — sits on a desk in a classroom set. She slowly
-unties the blouse, opening it to reveal a pink lace bra. She swings her legs, the skirt
-riding up. She slides off the desk and bends over it, the skirt flipping up to show
-matching pink underwear. She looks back over her shoulder with a playful expression.
-Bright classroom fluorescent lighting. Medium shot. Anime-inspired cosplay boudoir aesthetic.
-```
-
-### FN-09: Wet and Messy — Chocolate
-
-```
-A nude woman stands in a white bathtub. Someone pours warm liquid chocolate over her head
-from above. The dark chocolate cascades over her hair, down her face (she keeps her eyes
-closed), over her shoulders, and down her body, creating dark rivers on her skin. She
-laughs and runs her hands through the chocolate coating on her body, spreading it. She
-licks chocolate from her forearm. The white tub contrasts with the dark chocolate. Bright,
-even lighting. Wide shot then close-ups on chocolate flow patterns. Playful, messy, sensory.
-```
-
-### FN-10: Vacuum Bed
-
-```
-A transparent latex vacuum bed with a woman sealed inside. The air is slowly extracted, and
-the thin transparent latex conforms to every contour of her nude body beneath — vacuum-sealed
-to her form. She is visible through the material but cannot move. The outline of her face,
-breasts, hands pressing outward, hip bones, and toes are all sharply defined under the
-latex membrane. She pushes her fingers outward against the material, stretching it. Studio
-lighting from multiple angles to eliminate shadows. Full body overhead shot. Extreme fetish
-art installation aesthetic.
-```
-
----
-
-## Model-Specific Optimization Guide
-
-### Wan 2.2 Spicy — Best for Explicit Content ($0.03/req)
-
-| Setting | Recommended | Why |
-|:--------|:-----------|:----|
-| Resolution | 720p | Best quality/speed ratio; 480p has noticeably worse skin |
-| Duration | 5s | 8s degrades quality significantly |
-| Prompt length | 40–80 words | Shorter = fewer artifacts |
-| I2V vs LoRA | I2V for realism, LoRA for stylized | LoRA adds style but slight quality cost |
-
-**Prompt tips for Spicy:**
-- Lead with the action, not the setting: "She removes her dress..." not "In a bedroom with oak furniture..."
-- Always include: "consistent body proportions, no distortion, no morphing"
-- Specify exactly one camera angle — multiple angles confuse the model
-- Skin lighting keywords that work well: "warm key light", "soft diffused", "golden hour"
-- Avoid complex multi-person scenes (quality drops significantly)
-
-### Wan 2.5/2.6 — Best Value for Quality Nudity ($0.05–$0.07/req)
-
-| Setting | Recommended | Why |
-|:--------|:-----------|:----|
-| Resolution | 720p–1080p | 1080p is worth it on 2.6 |
-| Duration | 5–10s | Handles longer clips well |
-| Prompt length | 60–120 words | Leverages more detail than Spicy |
-| Mode | I2V | More NSFW-compliant than T2V |
-
-**Prompt tips for Wan 2.5/2.6:**
-- Use artistic framing language: "fine art photograph", "museum-quality figure study"
-- Describe nudity in clinical/artistic terms, not pornographic
-- For 2.6: excellent for artistic nude, body landscape, fine art — avoid explicit action
-- I2V mode with a carefully chosen reference image dramatically improves results
-- Wan 2.6 handles multi-angle descriptions and cinematic camera movements well
-
-### Seedance v1.5 Pro — Premium Cinematic Quality ($0.222/req)
-
-| Setting | Recommended | Why |
-|:--------|:-----------|:----|
-| Resolution | 720p | Only option currently |
-| Duration | 5–15s | Handles long clips exceptionally |
-| Prompt length | 80–150 words | Benefits from highly detailed descriptions |
-| Access | Requires NSFW whitelist | Apply through Atlas Cloud |
-
-**Prompt tips for Seedance:**
-- Invest in detailed environment descriptions — Seedance renders environments beautifully
-- Specify camera movements: "slow dolly in", "tracking shot", "crane shot from above"
-- Best for: lingerie, artistic nude, fantasy, cinematic narrative
-- Avoid: explicit sexual action (will refuse even with whitelist)
-- Include lighting color temperatures: "5600K daylight", "3200K tungsten warmth"
-- Audio sync capability — mention ambient sounds for better coherence
-
-### Vidu Q3-Pro — Balanced Quality/Price ($0.06/req)
-
-| Setting | Recommended | Why |
-|:--------|:-----------|:----|
-| Resolution | 720p–1080p | Both work well |
-| Duration | 5–10s | Good temporal coherence |
-| Prompt length | 50–100 words | Concise prompts work best |
-| Access | Requires NSFW whitelist | Available on Atlas Cloud |
-
-**Prompt tips for Vidu:**
-- Excellent at interpreting concise, well-structured prompts
-- Strong at single-subject scenes with clear action
-- Good anime/stylized content generation
-- Include character description upfront, then action, then environment
-- Works well for: artistic nude, lingerie, romantic, anime-style content
-- Moderate success with nudity, limited explicit action even with whitelist
-
-### Kling v3.0 Pro — Best Face Quality ($0.204/req)
-
-| Setting | Recommended | Why |
-|:--------|:-----------|:----|
-| Resolution | up to 1080p | Higher resolution = better faces |
-| Duration | 5–10s | Good temporal coherence |
-| Prompt length | 60–120 words | Detailed face descriptions pay off |
-| Access | Requires NSFW whitelist | Available on Atlas Cloud |
-
-**Prompt tips for Kling:**
-- Best facial rendering of any model — invest in describing expressions
-- Great for: close-up sensual scenes, emotional intimate moments, couple scenes
-- Describe subtle facial expressions: "eyes half-closed, lower lip slightly bitten"
-- Specify skin qualities: "sun-kissed skin with subtle freckles across the nose"
-- Camera keywords that work well: "shallow depth of field", "50mm portrait lens"
-- Moderate NSFW compliance — handles nudity, some suggestive action, rarely explicit
-
----
-
-## Advanced Prompt Techniques
-
-### Technique 1: Temporal Sequencing
-
-Structure your prompt as a timeline for more coherent motion:
-
-```
-Beat 1 (0-2s): [Starting state — what the viewer sees first]
-Beat 2 (2-4s): [Transition — the key action or change]
-Beat 3 (4-5s): [End state — the final frame]
-```
-
-**Example:**
-```
-Beat 1: A woman in a red dress stands at a balcony railing, glass of wine in hand, looking
-at the city below. Beat 2: She sets the glass down, reaches behind her neck, and unzips
-the dress. Beat 3: The dress falls to her waist, revealing her bare back to the night air.
-She inhales deeply, arms on the railing.
-```
-
-### Technique 2: Reference Image Strategy
-
-For I2V models, the reference image does 60% of the work. Optimize it:
-
-- **Face clarity**: Clear, well-lit face with the desired expression
-- **Pose base**: Starting pose should match your prompt's beginning state
-- **Lighting match**: Image lighting should match prompt lighting description
-- **Outfit match**: If the prompt involves undressing, the image should show the starting outfit
-- **Resolution**: Higher resolution reference = better output (minimum 1024x1024)
-
-### Technique 3: Negative Prompt Engineering
-
-Add these to reduce common NSFW video artifacts:
-
-```
-Negative: deformed hands, extra fingers, merged limbs, face morphing between frames,
-inconsistent skin tone, sudden lighting changes, clothing teleportation, body proportion
-shifts, uncanny valley expression, plastic skin texture
-```
-
-### Technique 4: Style Transfer Keywords
-
-Append these to shift the overall aesthetic:
-
-| Style Keyword | Effect |
-|:-------------|:-------|
-| "shot on 35mm film" | Adds grain, warmer tones, cinema feel |
-| "Vogue Italia editorial" | High fashion, dramatic lighting |
-| "Pirelli calendar style" | Artistic, body-focused, prestigious |
-| "amateur, natural, candid" | Reality feel, less produced |
-| "anime, cel-shaded" | Animated style (better on LoRA) |
-| "1970s Playboy aesthetic" | Vintage, warm, soft focus |
-| "Renaissance oil painting" | Classical art texture |
-| "cyberpunk neon" | Sci-fi, high contrast, colored lighting |
-
-### Technique 5: Iterative Prompt Refinement
-
-Start cheap, scale up:
-
-1. **Draft** on Wan 2.2 Spicy ($0.03) — test the core concept
-2. **Refine** on Wan 2.5 ($0.05) — check visual quality improvement
-3. **Final** on Seedance/Kling ($0.20+) — produce the polished version
-
-This workflow costs $0.28 for 3 generations instead of $0.60+ if you started on premium models.
-
----
-
-## Batch Generation Script
-
-For generating multiple prompts efficiently:
-
-```python
-"""
-Batch NSFW Video Generator
-Generate multiple videos from a prompt list using Atlas Cloud API.
-Platform: https://www.atlascloud.ai?ref=JPM683
-"""
-
-import requests
-import time
-import json
-import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
-API_KEY = os.environ.get("ATLAS_API_KEY", "your_key")
-BASE_URL = "https://api.atlascloud.ai/v1"
-HEADERS = {
-    "Authorization": f"Bearer {API_KEY}",
-    "Content-Type": "application/json"
-}
-
-# Define your prompts
-PROMPTS = [
-    {
-        "id": "RS-01",
-        "prompt": "A woman with sun-kissed skin and wavy auburn hair stands barefoot by an open window, wearing only a loose white linen shirt...",
-        "model": "alibaba/wan-2.2-spicy/image-to-video",
-        "image": "https://example.com/img1.jpg",
-        "resolution": "720p",
-        "duration": 5
-    },
-    {
-        "id": "RS-02",
-        "prompt": "Close-up transitioning to medium shot. A woman lies on rumpled white sheets...",
-        "model": "alibaba/wan-2.2-spicy/image-to-video",
-        "image": "https://example.com/img2.jpg",
-        "resolution": "720p",
-        "duration": 5
-    },
-    # Add more prompts here...
-]
-
-
-def submit_job(prompt_data: dict) -> dict:
-    """Submit a single video generation job."""
-    payload = {
-        "model": prompt_data["model"],
-        "input": {
-            "prompt": prompt_data["prompt"],
-            "image": prompt_data["image"],
-            "resolution": prompt_data["resolution"],
-            "duration": prompt_data["duration"]
-        }
-    }
-    resp = requests.post(f"{BASE_URL}/predictions", headers=HEADERS, json=payload)
-    resp.raise_for_status()
-    result = resp.json()
-    return {"prompt_id": prompt_data["id"], "prediction_id": result["id"]}
-
-
-def poll_job(prediction_id: str, timeout: int = 600) -> dict:
-    """Poll until the job completes or fails."""
-    start = time.time()
-    while time.time() - start < timeout:
-        resp = requests.get(f"{BASE_URL}/predictions/{prediction_id}", headers=HEADERS)
-        data = resp.json()
-        if data["status"] == "succeeded":
-            return data
-        elif data["status"] in ("failed", "canceled"):
-            return data
-        time.sleep(5)
-    return {"status": "timeout"}
-
-
-def batch_generate(prompts: list, max_concurrent: int = 5):
+def batch_generate(prompts: list, image_url: str = None):
     """
-    Submit and track multiple generation jobs.
+    批量生成多个视频
 
-    Args:
-        prompts: List of prompt dictionaries
-        max_concurrent: Maximum parallel submissions
+    参数:
+        prompts: 提示词列表
+        image_url: 共享的参考图片 URL
     """
     results = []
-
-    # Submit all jobs
-    print(f"Submitting {len(prompts)} jobs...")
-    jobs = []
-    with ThreadPoolExecutor(max_workers=max_concurrent) as executor:
-        futures = {executor.submit(submit_job, p): p for p in prompts}
-        for future in as_completed(futures):
-            try:
-                job = future.result()
-                jobs.append(job)
-                print(f"  Submitted {job['prompt_id']}: {job['prediction_id']}")
-            except Exception as e:
-                prompt_data = futures[future]
-                print(f"  Failed to submit {prompt_data['id']}: {e}")
-
-    # Poll all jobs
-    print(f"\nPolling {len(jobs)} jobs...")
-    for job in jobs:
-        result = poll_job(job["prediction_id"])
-        status = result.get("status", "unknown")
-        video_url = None
-        if status == "succeeded":
-            output = result.get("output", {})
-            video_url = output.get("video") if isinstance(output, dict) else output
-            if isinstance(video_url, list):
-                video_url = video_url[0]
-        results.append({
-            "prompt_id": job["prompt_id"],
-            "status": status,
-            "video_url": video_url
-        })
-        print(f"  {job['prompt_id']}: {status}")
-
-    # Save results
-    with open("batch_results.json", "w") as f:
-        json.dump(results, f, indent=2)
-    print(f"\nResults saved to batch_results.json")
-
-    # Summary
-    succeeded = sum(1 for r in results if r["status"] == "succeeded")
-    print(f"Summary: {succeeded}/{len(results)} succeeded")
-
+    for i, prompt in enumerate(prompts):
+        print(f"\n--- 正在生成第 {i+1}/{len(prompts)} 个视频 ---")
+        video_url = generate_nsfw_video(prompt, image_url)
+        results.append({"prompt": prompt, "video_url": video_url})
     return results
 
 
+# 使用示例
 if __name__ == "__main__":
-    batch_generate(PROMPTS, max_concurrent=5)
+    # 单个视频生成
+    prompt = (
+        "She slowly arches her back and runs one hand through her hair, "
+        "then turns her head to look over her shoulder. "
+        "Smooth, slow movement. Cinematic warm lighting."
+    )
+    reference_image = "https://your-image-url.com/reference.jpg"
+    video = generate_nsfw_video(prompt, reference_image)
+
+    # 批量生成示例
+    batch_prompts = [
+        "She slowly turns toward the camera, running fingers through her hair. Warm golden light, cinematic.",
+        "She lies back on the bed and stretches her arms overhead. Soft bedroom lighting, slow motion.",
+        "She walks slowly away from camera, looking back over her shoulder. Dim hallway, dramatic shadows.",
+    ]
+    results = batch_generate(batch_prompts, reference_image)
+    print(f"\n生成完成! 成功: {sum(1 for r in results if r['video_url'])}/{len(results)}")
 ```
 
 ---
 
 ## FAQ
 
-### Which model should I use?
+### What is the best AI for NSFW video generation?
 
-| Your Need | Best Model | Price | Why |
-|:----------|:-----------|:------|:----|
-| Explicit sexual content | Wan 2.2 Spicy | $0.03 | Only model with near-100% explicit compliance |
-| High-quality artistic nudity | Wan 2.6 | $0.07 | Best quality/price for non-explicit NSFW |
-| Premium cinematic quality | Seedance v1.5 Pro | $0.222 | Best motion and environment rendering |
-| Best face rendering | Kling v3.0 Pro | $0.204 | Superior facial detail and expression |
-| Budget with decent quality | Vidu Q3-Pro | $0.06 | Good balance of quality and price |
-| Anime / stylized content | Wan 2.2 Spicy LoRA | $0.03 | Apply anime LoRA for stylized output |
-| Testing / prototyping | Wan 2.2 Spicy | $0.03 | Cheapest for iteration |
+**Wan 2.2 Spicy I2V** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) is the best balance of quality, explicit capability, and price ($0.03/request). For highest visual quality, use **Wan 2.6** ($0.07/request). For audio-synced content, use **Seedance v1.5 Pro**.
 
-### Can I use these prompts on other platforms?
+### What is the cheapest NSFW video API?
 
-The prompts themselves are universal text. However, most other platforms (RunwayML, Pika, Luma) will refuse NSFW content. [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) is one of the few platforms that provides unrestricted NSFW generation via API.
+Atlas Cloud's **Wan 2.2 Spicy** at **$0.03 per video** is the cheapest option. That's **1,000 NSFW videos for $30**. Sign up with [this link](https://www.atlascloud.ai?ref=JPM683) for 25% bonus on your first top-up.
 
-### Do I need a reference image?
+### How do I generate AI adult content?
 
-For **I2V (image-to-video)** models, yes — a reference image is required and dramatically affects quality. For **T2V (text-to-video)** models, no image is needed.
+1. Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)
+2. Generate a reference image using Flux Dev or Seedream (both NSFW capable)
+3. Use that image with Wan 2.2 Spicy I2V and a motion prompt from this collection
+4. Cost: approximately $0.03 per video
 
-**Recommendation:** Even for explicit content, start with a SFW or mildly suggestive reference image. The model will generate the NSFW content from the prompt, using the image as a visual anchor for character appearance.
+### Wan Spicy vs Wan 2.6 for NSFW — which is better?
 
-### What resolution should I use?
+- **Wan 2.2 Spicy**: Better for explicit content, cheaper ($0.03), trained specifically for NSFW with LoRA optimization. Best for nudity, explicit scenes, and budget production.
+- **Wan 2.6**: Better visual quality overall, handles complex scenes better, up to 1080p/15s. Best for artistic nude, couple scenes, and commercial-quality output.
 
-- **480p**: Fastest, cheapest, but noticeably lower quality. Good for testing.
-- **720p**: Best balance of quality and speed. Recommended for most use cases.
-- **1080p**: Available on Wan 2.5/2.6, Kling, and Vidu. Slower but higher detail. Worth it for final production.
+### How to avoid bad anatomy in AI NSFW video?
 
-### How do I get NSFW whitelist access for Seedance, Vidu, and Kling?
+1. Use close-up body shots instead of full-body wide angles
+2. Keep hands out of frame or in simple positions
+3. Use side-profile views for full-body shots
+4. Shorter clips (5s) maintain better consistency
+5. Add "detailed anatomy, realistic proportions" to prompts
+6. Use negative prompts: "deformed, extra limbs, bad anatomy"
 
-Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683), add credits to your account, and request NSFW whitelist access through the dashboard or support. Approval is typically within 24 hours for verified accounts.
+### Can I generate explicit content commercially?
 
-### Are the prompts in this repo safe to use commercially?
+Check your local laws. Atlas Cloud's terms of service allow NSFW content generation on whitelisted models. You are responsible for compliance with all applicable laws regarding adult content in your jurisdiction.
 
-The prompts are released under the MIT license — you can use them freely. However, **you are responsible** for ensuring that the content you generate with them complies with local laws and the terms of service of the platform you use.
+### How long should NSFW AI videos be?
 
-### How much does it cost to generate all 115 prompts?
+**5 seconds** is the sweet spot. Quality degrades significantly in longer clips, especially for explicit content. For longer videos, generate multiple 5-second clips and stitch them together in post-production.
 
-| Model | Per Request | All 115 Prompts | Notes |
-|:------|:-----------|:---------------|:------|
-| Wan 2.2 Spicy | $0.03 | **$3.45** | Best value, handles all categories |
-| Wan 2.5 | $0.05 | $5.75 | Will refuse ~30% of explicit prompts |
-| Wan 2.6 | $0.07 | $8.05 | Will refuse ~60% of explicit prompts |
-| Vidu Q3-Pro | $0.06 | $6.90 | Will refuse most explicit prompts |
-| Kling v3.0 Pro | $0.204 | $23.46 | Premium quality, limited explicit |
-| Seedance v1.5 Pro | $0.222 | $25.53 | Premium quality, limited explicit |
+### Why are my results blurry or low quality?
 
-**Cost to test all prompts on Spicy with 25% first-recharge bonus:**
-Deposit $3.00 → Get $3.75 in credits → Generate all 115 prompts with $0.30 left over.
+1. Use a higher quality reference image (for I2V models)
+2. Upgrade to Wan 2.6 for 1080p output
+3. Add quality keywords: "high detail, sharp focus, 4K, cinematic quality"
+4. Use negative prompts: "blurry, low quality, jpeg artifacts"
+5. Upscale the output with Real-ESRGAN or Topaz Video AI
 
 ---
 
 ## Get Started
 
-<div align="center">
-
-### Start generating NSFW AI videos for as little as $0.03
-
-**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)** — SOC I & II Certified | HIPAA Compliant | US-based
-
-1. [Create your account](https://www.atlascloud.ai?ref=JPM683)
-2. Add credits (25% bonus on first recharge, up to $100)
-3. Copy your API key
-4. Use any prompt from this collection
-
-[![Get Started](https://img.shields.io/badge/Start_Creating-Atlas_Cloud-blue?style=for-the-badge)](https://www.atlascloud.ai?ref=JPM683)
-
-</div>
-
----
-
-## Star History
-
-<div align="center">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=thoughtincode/nsfw-ai-video-prompts&type=Date)](https://star-history.com/#thoughtincode/nsfw-ai-video-prompts&Date)
-
-</div>
+1. **Sign up** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) — get **25% bonus credit** on your first top-up (up to $100 extra)
+2. **Copy** any prompt from this collection
+3. **Generate** your first NSFW video for $0.03
+4. **Star** this repo to save it for later
 
 ---
 
 ## Contributing
 
-Contributions are welcome! If you have NSFW video prompts that produce great results, please submit a PR. Guidelines:
-
-1. Include the model you tested on and the result quality
-2. Categorize appropriately
-3. Provide sufficient detail (at least 3 sentences)
-4. Follow the formatting pattern of existing prompts
-5. Legal adult content only — absolutely no minors, non-consensual scenarios, or illegal content
+Have prompts that produce great results? Submit a pull request. Include:
+- The full prompt text
+- Which model you used
+- Sample output description
+- Any tips for getting the best results
 
 ---
 
 ## License
 
-MIT License. See [LICENSE](./LICENSE) for details.
-
-Prompts are free to use, modify, and distribute. Generated content is subject to the terms of the platform used.
+MIT License. Prompts are free to use for any purpose. Generated content is subject to the terms of the model provider and applicable laws.
 
 ---
 
-<div align="center">
-
-**Made for the creative community by [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)**
-
-*The world's most affordable NSFW AI video generation platform.*
-
-</div>
+**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)** — Uncensored AI Video Generation Starting at $0.03
