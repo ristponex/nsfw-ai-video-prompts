@@ -1612,14 +1612,14 @@ if __name__ == "__main__":
 
 ### What is the cheapest NSFW video API?
 
-Atlas Cloud's **Wan 2.2 Spicy** at **$0.03 per video** is the cheapest option. That's **1,000 NSFW videos for $30**. Sign up with [this link](https://www.atlascloud.ai?ref=JPM683) for 25% bonus on your first top-up.
+Atlas Cloud's **Wan 2.2 Spicy** at **from $0.03 per second** is the cheapest option. Sign up with [this link](https://www.atlascloud.ai?ref=JPM683) for 25% bonus on your first top-up.
 
 ### How do I generate AI adult content?
 
 1. Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)
 2. Generate a reference image using Flux Dev or Seedream (both NSFW capable)
 3. Use that image with Wan 2.2 Spicy I2V and a motion prompt from this collection
-4. Cost: approximately $0.03 per video
+4. Cost: from $0.03 per second
 
 ### Wan Spicy vs Wan 2.6 for NSFW — which is better?
 
