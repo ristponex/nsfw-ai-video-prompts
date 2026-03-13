@@ -16,7 +16,7 @@
 [![提示词数量](https://img.shields.io/badge/提示词-100+-blue)]()
 [![支持模型](https://img.shields.io/badge/支持模型-5个无审核-red)]()
 [![最后更新](https://img.shields.io/badge/更新日期-2026年3月-green)]()
-[![平台](https://img.shields.io/badge/平台-Atlas%20Cloud-purple)](https://www.atlascloud.ai?ref=JPM683)
+[![平台](https://img.shields.io/badge/平台-Atlas%20Cloud-purple)](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 
 **全网最大的开源 NSFW AI 视频提示词合集。每条提示词都经过实测，按场景分类，针对各模型优化。**
 
@@ -56,7 +56,7 @@
 
 ## 支持模型与价格
 
-以下模型均可通过 [Atlas Cloud API](https://www.atlascloud.ai?ref=JPM683) 使用，且已开通 NSFW 内容生成权限。
+以下模型均可通过 [Atlas Cloud API](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) 使用，且已开通 NSFW 内容生成权限。
 
 | 模型 | 类型 | 价格 | 分辨率 | 时长 | NSFW 程度 | 最佳用途 |
 |:-----|:-----|:-----|:-------|:-----|:----------|:---------|
@@ -76,7 +76,7 @@
 - **SOC I & II 认证** — 企业级安全合规
 - **HIPAA 合规** — 医疗级数据保护
 - **美国注册公司** — 受美国数据保护法管辖
-- **首次充值赠送 25%**（最高赠送 $100）— [立即注册](https://www.atlascloud.ai?ref=JPM683)
+- **首次充值赠送 25%**（最高赠送 $100）— [立即注册](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 - **支持微信/支付宝直接付款** — 无需国际信用卡，对国内用户友好
 
 ---
@@ -116,7 +116,7 @@
 
 ### 前置条件
 
-1. 在 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) 注册账号
+1. 在 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) 注册账号
 2. 充值（首次充值赠送 25%，最高赠送 $100，支持微信/支付宝）
 3. 在控制面板复制 API Key
 
@@ -126,7 +126,7 @@
 """
 NSFW AI Video Generation — Complete Python Example
 Supports: Wan 2.2 Spicy, Wan 2.5/2.6, Seedance, Vidu, Kling
-Platform: Atlas Cloud (https://www.atlascloud.ai?ref=JPM683)
+Platform: Atlas Cloud (https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 """
 
 import requests
@@ -1383,7 +1383,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 
 ### 这些提示词能在其他平台用吗？
 
-提示词本身是通用文本。但大多数平台（RunwayML、Pika、Luma）会拒绝 NSFW 内容。[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) 是极少数提供无限制 NSFW 生成 API 的平台之一。
+提示词本身是通用文本。但大多数平台（RunwayML、Pika、Luma）会拒绝 NSFW 内容。[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) 是极少数提供无限制 NSFW 生成 API 的平台之一。
 
 ### 生成全部 115 条提示词要多少钱？
 
@@ -1401,7 +1401,7 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 
 ### 如何获得 NSFW 白名单？
 
-在 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) 注册，充值后通过控制面板或客服申请 NSFW 白名单。已验证账户通常在 24 小时内获批。
+在 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) 注册，充值后通过控制面板或客服申请 NSFW 白名单。已验证账户通常在 24 小时内获批。
 
 ---
 
@@ -1411,16 +1411,16 @@ neon color palette. Ghost in the Shell meets ecchi aesthetic. Medium shot, noir 
 
 ### NSFW AI 视频生成，最低 $0.03 起
 
-**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)** — SOC I & II 认证 | HIPAA 合规 | 美国注册公司
+**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)** — SOC I & II 认证 | HIPAA 合规 | 美国注册公司
 
 **支持微信/支付宝直接付款** — 无需国际信用卡
 
-1. [注册账号](https://www.atlascloud.ai?ref=JPM683)
+1. [注册账号](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 2. 充值（首充赠送 25%，最高 $100，支持微信/支付宝）
 3. 复制 API Key
 4. 使用本合集中任意提示词
 
-[![立即开始](https://img.shields.io/badge/立即开始-Atlas_Cloud-blue?style=for-the-badge)](https://www.atlascloud.ai?ref=JPM683)
+[![立即开始](https://img.shields.io/badge/立即开始-Atlas_Cloud-blue?style=for-the-badge)](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 
 </div>
 
@@ -1458,7 +1458,7 @@ MIT 许可证。详见 [LICENSE](./LICENSE)。
 
 <div align="center">
 
-**由 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) 为创意社区打造**
+**由 [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) 为创意社区打造**
 
 *全球最实惠的 NSFW AI 视频生成平台。*
 

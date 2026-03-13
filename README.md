@@ -2,13 +2,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Prompts](https://img.shields.io/badge/Prompts-100%2B-red)](.)
-[![Models](https://img.shields.io/badge/Platform-Atlas%20Cloud-blue)](https://www.atlascloud.ai?ref=JPM683)
+[![Models](https://img.shields.io/badge/Platform-Atlas%20Cloud-blue)](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 
 **Languages**: English | [中文](README_zh-CN.md) | [日本語](README_ja.md) | [한국어](README_ko.md)
 
 > The largest open collection of **copy-paste ready** NSFW AI video prompts. Every prompt is tested, detailed, and production-ready. Stop guessing — start generating.
 
-**⚡ New user?** Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) and get **25% bonus credit** on your first top-up (up to $100 extra).
+**⚡ New user?** Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) and get **25% bonus credit** on your first top-up (up to $100 extra).
 
 ---
 
@@ -1432,7 +1432,7 @@ disconnected body parts, misaligned anatomy, asymmetric features
 
 ### Step 1: Generate Reference Image
 
-Use **Flux Dev** or **Seedream** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) — both are NSFW capable.
+Use **Flux Dev** or **Seedream** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) — both are NSFW capable.
 
 **Tips for reference images:**
 - Generate the exact pose you want as the starting frame
@@ -1608,15 +1608,15 @@ if __name__ == "__main__":
 
 ### What is the best AI for NSFW video generation?
 
-**Wan 2.2 Spicy I2V** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) is the best balance of quality, explicit capability, and price (from $0.03 per second). For highest visual quality, use **Wan 2.6** (from $0.07 per second). For audio-synced content, use **Seedance v1.5 Pro**.
+**Wan 2.2 Spicy I2V** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) is the best balance of quality, explicit capability, and price (from $0.03 per second). For highest visual quality, use **Wan 2.6** (from $0.07 per second). For audio-synced content, use **Seedance v1.5 Pro**.
 
 ### What is the cheapest NSFW video API?
 
-Atlas Cloud's **Wan 2.2 Spicy** at **from $0.03 per second** is the cheapest option. Sign up with [this link](https://www.atlascloud.ai?ref=JPM683) for 25% bonus on your first top-up.
+Atlas Cloud's **Wan 2.2 Spicy** at **from $0.03 per second** is the cheapest option. Sign up with [this link](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) for 25% bonus on your first top-up.
 
 ### How do I generate AI adult content?
 
-1. Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)
+1. Sign up on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)
 2. Generate a reference image using Flux Dev or Seedream (both NSFW capable)
 3. Use that image with Wan 2.2 Spicy I2V and a motion prompt from this collection
 4. Cost: from $0.03 per second
@@ -1655,7 +1655,7 @@ Check your local laws. Atlas Cloud's terms of service allow NSFW content generat
 
 ## Get Started
 
-1. **Sign up** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683) — get **25% bonus credit** on your first top-up (up to $100 extra)
+1. **Sign up** on [Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts) — get **25% bonus credit** on your first top-up (up to $100 extra)
 2. **Copy** any prompt from this collection
 3. **Generate** your first NSFW video for $0.03
 4. **Star** this repo to save it for later
@@ -1678,4 +1678,4 @@ MIT License. Prompts are free to use for any purpose. Generated content is subje
 
 ---
 
-**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)** — Uncensored AI Video Generation Starting at $0.03
+**[Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=nsfw-ai-video-prompts)** — Uncensored AI Video Generation Starting at $0.03
