@@ -30,6 +30,7 @@
 - [Workflow: Image-to-Video Pipeline](#workflow-image-to-video-nsfw-pipeline)
 - [API Quick Start](#api-quick-start)
 - [FAQ](#faq)
+- [Related Resources](#related-resources)
 
 ---
 
@@ -38,7 +39,7 @@
 | Model | Type | Price | Key Strength |
 |-------|------|-------|-------------|
 | **Wan 2.2 Spicy I2V** | Image-to-Video | from $0.03/s | LoRA-optimized for NSFW, best value |
-| **Wan 2.2 Spicy I2V LoRA** | Image-to-Video | from $0.03/s | Custom style support via LoRA |
+| **Wan 2.2 Spicy I2V LoRA** (`alibaba/wan-2.2-spicy/image-to-video-lora`) | Image-to-Video | $0.04/s | LoRA support, 480p/720p, 5-8s duration |
 | **Wan 2.5 I2V** | Image-to-Video | varies | NSFW capable, good quality |
 | **Wan 2.5 T2V** | Text-to-Video | varies | NSFW capable, no reference image needed |
 | **Wan 2.6 T2V** | Text-to-Video | from $0.07/s | Highest quality, up to 1080p 15s |
@@ -1659,6 +1660,15 @@ Check your local laws. Atlas Cloud's terms of service allow NSFW content generat
 2. **Copy** any prompt from this collection
 3. **Generate** your first NSFW video for $0.03
 4. **Star** this repo to save it for later
+
+---
+
+## Related Resources
+
+- [Wan 2.2 Spicy LoRA Guide](https://github.com/ristponex/wan-2.2-spicy-lora-nsfw) — Full LoRA guide
+- [AI Video LoRA Guide](https://github.com/ristponex/ai-video-lora-guide) — General LoRA tutorial
+- [NSFW AI API Comparison](https://github.com/ristponex/nsfw-ai-api-comparison) — Platform comparison
+- [Awesome NSFW AI Video](https://github.com/ristponex/awesome-nsfw-ai-video) — Curated resource list
 
 ---
 
